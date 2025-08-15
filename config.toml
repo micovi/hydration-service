@@ -9,7 +9,7 @@ host = "0.0.0.0"
 [hyperbeam]
 # Default HyperBEAM node URL
 # Can be overridden per-process in the pool config
-base_url = "http://65.108.7.125:8734"
+base_url = "http://localhost:8734"
 
 [ao]
 # AO Compute Unit URL for fetching reserves

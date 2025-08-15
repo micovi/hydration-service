@@ -133,7 +133,8 @@ async fn main() -> Result<()> {
                              process_id, result.computed_slot, result.current_slot);
                     },
                     Err(e) => {
-                        error!("Failed to recover process {}: {}", process_id, e);
+                        // Don't log as error - process might not be deployed yet
+                        info!("Could not recover slots for process {} (might not be deployed yet): {}", process_id, e);
                     }
                 }
             });
@@ -549,25 +550,32 @@ async fn initialize_process(
         status.cron_initialized = true;
     }).await.map_err(|e| anyhow!(e))?;
     
-    // Immediately check slots after initializing
-    info!("Getting initial slot values for {}", config.name);
-    let result = client.check_slots(config.base_url.as_deref(), &config.process_id).await?;
-    
-    queue.update_process_status(&config.process_id, |status| {
-        status.computed_slot = Some(result.computed_slot);
-        status.current_slot = Some(result.current_slot);
-        status.last_checked = Some(Utc::now());
-        status.metrics.check_count = 1;
-        
-        // Set initial deficit
-        if result.computed_slot < result.current_slot {
-            status.metrics.initial_slot_deficit = Some(result.current_slot - result.computed_slot);
-            status.metrics.sync_start_time = Some(Utc::now());
+    // Try to check slots after initializing, but don't fail if it doesn't work
+    // (process might not be deployed yet)
+    info!("Attempting to get initial slot values for {}", config.name);
+    match client.check_slots(config.base_url.as_deref(), &config.process_id).await {
+        Ok(result) => {
+            queue.update_process_status(&config.process_id, |status| {
+                status.computed_slot = Some(result.computed_slot);
+                status.current_slot = Some(result.current_slot);
+                status.last_checked = Some(Utc::now());
+                status.metrics.check_count = 1;
+                
+                // Set initial deficit
+                if result.computed_slot < result.current_slot {
+                    status.metrics.initial_slot_deficit = Some(result.current_slot - result.computed_slot);
+                    status.metrics.sync_start_time = Some(Utc::now());
+                }
+            }).await.map_err(|e| anyhow!(e))?;
+            
+            info!("Process {} initialized with slots - Computed: {}, Current: {}", 
+                 config.name, result.computed_slot, result.current_slot);
+        },
+        Err(e) => {
+            // Process might not be deployed yet, just log and continue
+            info!("Process {} initialized (cron set), but couldn't fetch slots yet: {}", config.name, e);
         }
-    }).await.map_err(|e| anyhow!(e))?;
-    
-    info!("Process {} initialized - Computed: {}, Current: {}", 
-         config.name, result.computed_slot, result.current_slot);
+    }
     
     Ok(())
 }
