@@ -249,6 +249,40 @@ async fn monitor_cron_list(state: Arc<AppState>) {
                 *cron_list = cron_items.clone();
                 drop(cron_list);
                 
+                // Build set of process IDs that have active crons
+                let mut cron_process_ids = std::collections::HashSet::new();
+                for cron_item in &cron_items {
+                    if let Some(process_id) = cron_item.path
+                        .strip_prefix("/")
+                        .and_then(|p| p.split("~").next()) {
+                        cron_process_ids.insert(process_id.to_string());
+                    }
+                }
+                
+                // Clean up processes in active HashMap that don't have crons
+                let active = state.queue.active.read().await;
+                let active_ids: Vec<String> = active.keys().cloned().collect();
+                drop(active);
+                
+                for process_id in active_ids {
+                    if !cron_process_ids.contains(&process_id) {
+                        // Process no longer has a cron, remove from active
+                        info!("Process {} no longer has active cron, removing from active list", process_id);
+                        let mut active = state.queue.active.write().await;
+                        active.remove(&process_id);
+                        
+                        // Update status in all_processes
+                        let mut all = state.queue.all_processes.write().await;
+                        if let Some(status) = all.get_mut(&process_id) {
+                            // Don't change to error, just mark as queued again if it was active
+                            if status.state == ProcessState::Active {
+                                status.state = ProcessState::Queued;
+                                info!("Process {} moved back to queued state", process_id);
+                            }
+                        }
+                    }
+                }
+                
                 // Check slots for each active cron process
                 for cron_item in &cron_items {
                     // Extract process ID from path (format: /processId~process@1.0/now)
@@ -445,8 +479,15 @@ async fn monitor_loop(state: Arc<AppState>) {
         }
         
         // Try to activate next process
+        let active_count = state.queue.active.read().await.len();
+        let queued_count = state.queue.queued.read().await.len();
+        
+        if active_count < 5 && queued_count > 0 {
+            debug!("Active: {}/5, Queued: {} - attempting to activate more", active_count, queued_count);
+        }
+        
         while let Some(config) = state.queue.activate_next().await {
-            info!("Activating process: {}", config.name);
+            info!("Activating process: {} (Active count was: {})", config.name, active_count);
             
             let client = state.client.clone();
             let queue = state.queue.clone();
@@ -454,6 +495,7 @@ async fn monitor_loop(state: Arc<AppState>) {
             tokio::spawn(async move {
                 if let Err(e) = initialize_process(&client, &queue, &config).await {
                     error!("Failed to initialize {}: {}", config.process_id, e);
+                    // Important: Remove from active on error so slot can be reused
                     let _ = queue.mark_error(&config.process_id, e.to_string()).await;
                 }
             });
