@@ -5,26 +5,30 @@ use std::time::{Duration, Instant};
 use std::collections::HashMap;
 use crate::models::{AODryRunRequest, AODryRunResponse, AOTag};
 
-const DEFAULT_BASE_URL: &str = "http://65.108.7.125:8734";
-const AO_CU_URL: &str = "https://cu.ao-testnet.xyz";
 const REQUEST_TIMEOUT: Duration = Duration::from_secs(30);
 
 pub struct HyperBeamClient {
     client: Client,
+    default_base_url: String,
+    ao_cu_url: String,
 }
 
 impl HyperBeamClient {
-    pub fn new() -> Self {
+    pub fn new(default_base_url: String, ao_cu_url: String) -> Self {
         let client = Client::builder()
             .timeout(REQUEST_TIMEOUT)
             .build()
             .expect("Failed to create HTTP client");
         
-        Self { client }
+        Self { 
+            client,
+            default_base_url,
+            ao_cu_url,
+        }
     }
 
     pub async fn initialize_cron(&self, base_url: Option<&str>, process_id: &str) -> Result<()> {
-        let base = base_url.unwrap_or(DEFAULT_BASE_URL);
+        let base = base_url.unwrap_or(&self.default_base_url);
         let url = format!("{}/~cron@1.0/once?cron-path=/{process_id}~process@1.0/now", base);
         
         let response = self.client
@@ -49,7 +53,7 @@ impl HyperBeamClient {
         process_id: &str,
         endpoint: &str,
     ) -> Result<(u64, f64)> {
-        let base = base_url.unwrap_or(DEFAULT_BASE_URL);
+        let base = base_url.unwrap_or(&self.default_base_url);
         let url = format!("{}/{process_id}~process@1.0/{endpoint}", base);
         
         let start = Instant::now();
@@ -146,7 +150,7 @@ impl HyperBeamClient {
         base_url: Option<&str>,
         process_id: &str,
     ) -> Result<HashMap<String, String>> {
-        let base = base_url.unwrap_or(DEFAULT_BASE_URL);
+        let base = base_url.unwrap_or(&self.default_base_url);
         let url = format!("{}/{process_id}~process@1.0/now/reserves", base);
         
         let response = self.client
@@ -181,7 +185,7 @@ impl HyperBeamClient {
             ],
         };
         
-        let url = format!("{}/dry-run?process-id={}", AO_CU_URL, process_id);
+        let url = format!("{}/dry-run?process-id={}", &self.ao_cu_url, process_id);
         let response = self.client
             .post(&url)
             .json(&payload)
@@ -237,7 +241,7 @@ impl HyperBeamClient {
     }
     
     pub async fn fetch_cron_list(&self, base_url: Option<&str>) -> Result<Vec<CronItem>> {
-        let base = base_url.unwrap_or(DEFAULT_BASE_URL);
+        let base = base_url.unwrap_or(&self.default_base_url);
         let url = format!("{}/~cron@1.0/list/serialize~json@1.0", base);
         
         let response = self.client

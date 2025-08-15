@@ -1,0 +1,42 @@
+# Hydration Service Configuration
+
+[server]
+# Port to run the web server on
+port = 8080
+# Host to bind to
+host = "0.0.0.0"
+
+[hyperbeam]
+# Default HyperBEAM node URL
+# Can be overridden per-process in the pool config
+base_url = "http://65.108.7.125:8734"
+
+[ao]
+# AO Compute Unit URL for fetching reserves
+cu_url = "https://cu.ao-testnet.xyz"
+
+[monitoring]
+# Update intervals in seconds
+cron_list_interval = 10        # How often to fetch cron list and check active processes
+queue_slots_interval = 10      # How often to check current slots for queued processes
+synced_pools_interval = 60     # How often to update synced pools data
+monitor_loop_interval = 10     # How often the main monitor loop runs
+queue_slots_delay = 30         # Initial delay before starting queue slot monitoring
+
+[limits]
+# Maximum number of concurrent active processes
+max_active_processes = 5
+# Number of queued processes to show in UI
+queue_preview_limit = 10
+# Number of queued processes to check slots for
+queue_check_limit = 20
+
+[ui]
+# Auto-refresh interval for web UI in seconds
+refresh_interval = 5
+
+[logging]
+# Log level: trace, debug, info, warn, error
+level = "info"
+# Log format: full, compact, pretty, json
+format = "full"

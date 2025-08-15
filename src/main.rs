@@ -2,6 +2,7 @@ mod models;
 mod hyperbeam;
 mod queue;
 mod state;
+mod config;
 
 use anyhow::{anyhow, Result};
 use axum::{
@@ -15,6 +16,7 @@ use chrono::Utc;
 use models::{AddProcessRequest, ApiResponse, ApiStatus, Config, ProcessConfig, ProcessState};
 use queue::QueueManager;
 use hyperbeam::{HyperBeamClient, CronItem};
+use config::ServiceConfig;
 use std::sync::Arc;
 use std::time::Duration;
 use tokio::sync::RwLock;
@@ -27,20 +29,31 @@ struct AppState {
     client: Arc<HyperBeamClient>,
     start_time: chrono::DateTime<Utc>,
     cron_list: Arc<RwLock<Vec<CronItem>>>,
+    config: Arc<ServiceConfig>,
 }
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    // Initialize tracing
+    // Load configuration
+    let service_config = ServiceConfig::load()?;
+    let service_config = Arc::new(service_config);
+    
+    // Initialize tracing based on config
+    let filter = format!("hydration_service={},tower_http=warn", service_config.logging.level);
     tracing_subscriber::fmt()
-        .with_env_filter("hydration_service=debug,tower_http=debug")
+        .with_env_filter(filter)
         .init();
 
     info!("Starting Hydration Service");
+    info!("Using HyperBEAM URL: {}", service_config.hyperbeam.base_url);
+    info!("Using AO CU URL: {}", service_config.ao.cu_url);
 
     // Initialize components
-    let queue = Arc::new(QueueManager::new());
-    let client = Arc::new(HyperBeamClient::new());
+    let queue = Arc::new(QueueManager::new(service_config.limits.max_active_processes));
+    let client = Arc::new(HyperBeamClient::new(
+        service_config.hyperbeam.base_url.clone(),
+        service_config.ao.cu_url.clone(),
+    ));
     
     // Load previous state
     let state_loaded = state::load_state(&queue).await?;
@@ -90,6 +103,7 @@ async fn main() -> Result<()> {
         client: client.clone(),
         start_time: Utc::now(),
         cron_list: Arc::new(RwLock::new(Vec::new())),
+        config: service_config.clone(),
     });
 
     // Recovery: Check active processes that are initialized but have no slot values
@@ -169,10 +183,11 @@ async fn main() -> Result<()> {
         .layer(CorsLayer::permissive())
         .with_state(app_state);
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:8080")
+    let bind_addr = format!("{}:{}", service_config.server.host, service_config.server.port);
+    let listener = tokio::net::TcpListener::bind(&bind_addr)
         .await?;
     
-    info!("Server running on http://0.0.0.0:8080");
+    info!("Server running on http://{}", bind_addr);
     
     axum::serve(listener, app).await?;
     

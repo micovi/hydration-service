@@ -5,22 +5,22 @@ use std::sync::Arc;
 use tokio::sync::RwLock;
 use tracing::info;
 
-const MAX_ACTIVE_PROCESSES: usize = 5;
-
 pub struct QueueManager {
     pub active: Arc<RwLock<HashMap<String, ProcessStatus>>>,
     pub queued: Arc<RwLock<VecDeque<ProcessConfig>>>,
     pub synced: Arc<RwLock<HashMap<String, ProcessStatus>>>,
     pub all_processes: Arc<RwLock<HashMap<String, ProcessStatus>>>,
+    max_active_processes: usize,
 }
 
 impl QueueManager {
-    pub fn new() -> Self {
+    pub fn new(max_active_processes: usize) -> Self {
         Self {
             active: Arc::new(RwLock::new(HashMap::new())),
             queued: Arc::new(RwLock::new(VecDeque::new())),
             synced: Arc::new(RwLock::new(HashMap::new())),
             all_processes: Arc::new(RwLock::new(HashMap::new())),
+            max_active_processes,
         }
     }
 
@@ -53,7 +53,7 @@ impl QueueManager {
 
     pub async fn activate_next(&self) -> Option<ProcessConfig> {
         let active_count = self.active.read().await.len();
-        if active_count >= MAX_ACTIVE_PROCESSES {
+        if active_count >= self.max_active_processes {
             return None;
         }
         
