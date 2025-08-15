@@ -1,0 +1,59 @@
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# State and data files
+hydration-state.json
+hydrate-daemon-state*.json
+hydrate-daemon-state*.md
+hydrate-daemon-metrics.json
+hydrate-daemon-errors.txt
+hydrate-daemon-queue-state.json
+hydrate-daemon-queue-output.txt
+
+# Config files with sensitive data
+config-prod.json
+config-staging.json
+pool-config*.json
+under-50k.json
+
+# Reports and exports
+exports/
+*.md
+*.txt
+report.md
+reserves-comparison.md
+current-slots-report.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (if any JS/TS files remain)
+node_modules/
+
+# Debug
+debug/
+*.stackdump
+core.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
