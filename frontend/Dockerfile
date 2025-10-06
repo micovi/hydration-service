@@ -5,7 +5,7 @@ FROM oven/bun:latest
 WORKDIR /app
 
 # Copy package files first to leverage Docker cache for dependencies
-COPY package.json package-lock.json yarn.lock bun.lockb ./
+COPY . ./
 
 # Install dependencies with Bun
 RUN bun install
