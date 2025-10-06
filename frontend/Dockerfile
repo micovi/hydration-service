@@ -3,21 +3,11 @@ FROM oven/bun:1.1 AS build
 WORKDIR /app
 
 # Install deps (better layer caching with lockfile)
-COPY bun.lock package.json ./
+COPY . ./
 RUN bun install
 
-# Copy the rest and build
-COPY . .
 # If your build script is "vite build", keep it; otherwise adjust:
 RUN bun run build
-
-# ---- Run stage ----
-FROM oven/bun:1.1 AS run
-WORKDIR /app
-
-# Copy only the built assets and package.json for scripts
-COPY --from=build /app/dist ./dist
-COPY package.json bun.lock ./
 
 # Expose the Vite preview port (default 4173)
 EXPOSE 4173
