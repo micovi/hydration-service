@@ -20,7 +20,7 @@ interface Process {
   type: string;
 }
 
-export const HB_URL = "/hb-node";
+export const HB_URL = "/hydration-service/hb-node";
 
 const FLP_QUERY = gql`
   query Transactions($id: String!) {
