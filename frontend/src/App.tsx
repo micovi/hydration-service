@@ -58,7 +58,8 @@ function App() {
     error,
   } = useQuery<Process[]>({
     queryKey: ["processes"],
-    queryFn: () => fetch("/hydration-service/processes.json").then((res) => res.json()),
+    queryFn: () =>
+      fetch("/hydration-service/processes.json").then((res) => res.json()),
   });
 
   return (
@@ -189,6 +190,11 @@ function ProcessRecordRow({ process }: { process: Process }) {
     },
   });
 
+  const reloadData = () => {
+    queryClient.invalidateQueries({ queryKey: ["computeAtSlot", process.id] });
+    queryClient.invalidateQueries({ queryKey: ["latestSlot", process.id] });
+  };
+
   return (
     <TableRow key={process.id}>
       <TableCell className="font-mono">{process.name}</TableCell>
@@ -218,6 +224,11 @@ function ProcessRecordRow({ process }: { process: Process }) {
       >
         {computeAtSlot ||
           (isLoadingComputeAtSlot ? "Loading..." : errorComputeAtSlot?.message)}
+      </TableCell>
+      <TableCell>
+        <Button onClick={reloadData} type="button">
+          Reload
+        </Button>
       </TableCell>
       {debug && (
         <>
