@@ -285,8 +285,18 @@
 		"type": "flp"
 	},
 	{
-		"name": "AO/wAR",
+		"name": "AO/wAR 25",
 		"id": "B6qAwHi2OjZmyFCEU8hV6FZDSHbAOz8r0yy-fBbuTus",
+		"type": "amm"
+	},
+	{
+		"name": "AO/wAR 300",
+		"id": "NdeAIh-lymKjmg3TxDlvO2sroE-osq-Qumjgam8-XEE",
+		"type": "amm"
+	},
+	{
+		"name": "AO/wAR 75",
+		"id": "cfJIBVw4ojWnjiQJ1Z6CRU56YnYJPZpaMgAIs-BSi68",
 		"type": "amm"
 	}
 ]
