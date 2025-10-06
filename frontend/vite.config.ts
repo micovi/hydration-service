@@ -15,10 +15,10 @@ export default defineConfig({
   server: {
     allowedHosts: ["hb.zoao.dev", "localhost"],
     proxy: {
-      "/hb-node": {
+      "/hydration-service/hb-node": {
         target: "http://65.108.7.125:8734",
         changeOrigin: true,
-        rewrite: (p) => p.replace(/^\/hb-node/, ""),
+        rewrite: (p) => p.replace(/^\/hydration-service\/hb-node/, ""),
       },
     },
   },
