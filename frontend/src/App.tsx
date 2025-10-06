@@ -58,7 +58,7 @@ function App() {
     error,
   } = useQuery<Process[]>({
     queryKey: ["processes"],
-    queryFn: () => fetch("/processes.json").then((res) => res.json()),
+    queryFn: () => fetch("/hydration-service/processes.json").then((res) => res.json()),
   });
 
   return (
