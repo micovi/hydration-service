@@ -17,7 +17,7 @@ WORKDIR /app
 
 # Copy only the built assets and package.json for scripts
 COPY --from=build /app/dist ./dist
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 
 # Expose the Vite preview port (default 4173)
 EXPOSE 4173
