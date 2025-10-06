@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install deps (better layer caching with lockfile)
 COPY bun.lock package.json ./
-RUN bun install --frozen-lockfile
+RUN bun install
 
 # Copy the rest and build
 COPY . .
