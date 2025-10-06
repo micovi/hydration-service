@@ -2,6 +2,7 @@ import "./App.css";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Client, cacheExchange, fetchExchange, gql } from "urql";
 import { useQueryState, parseAsBoolean } from "nuqs";
+import { RefreshCwIcon } from "lucide-react";
 
 import {
   Table,
@@ -21,6 +22,7 @@ interface Process {
 }
 
 export const HB_URL = "/hydration-service/hb-node";
+//export const HB_URL = "http://65.108.7.125:8734";
 
 const FLP_QUERY = gql`
   query Transactions($id: String!) {
@@ -127,6 +129,7 @@ function ProcessRecordRow({ process }: { process: Process }) {
   const {
     data: computeAtSlot,
     isLoading: isLoadingComputeAtSlot,
+    isFetching: isReloadingComputeAtSlot,
     error: errorComputeAtSlot,
   } = useQuery<string>({
     queryKey: ["computeAtSlot", process.id],
@@ -145,6 +148,7 @@ function ProcessRecordRow({ process }: { process: Process }) {
   const {
     data: latestSlot,
     isLoading: isLoadingLatestSlot,
+    isFetching: isReloadingLatestSlot,
     error: errorLatestSlot,
   } = useQuery<string>({
     queryKey: ["latestSlot", process.id],
@@ -226,8 +230,17 @@ function ProcessRecordRow({ process }: { process: Process }) {
           (isLoadingComputeAtSlot ? "Loading..." : errorComputeAtSlot?.message)}
       </TableCell>
       <TableCell>
-        <Button onClick={reloadData} type="button">
-          Reload
+        <Button
+          onClick={reloadData}
+          type="button"
+          disabled={isReloadingComputeAtSlot || isReloadingLatestSlot}
+        >
+          <RefreshCwIcon
+            className={cn(
+              isReloadingComputeAtSlot ||
+                (isReloadingLatestSlot && "animate-spin")
+            )}
+          />
         </Button>
       </TableCell>
       {debug && (
