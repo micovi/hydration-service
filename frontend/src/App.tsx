@@ -20,7 +20,7 @@ interface Process {
   type: string;
 }
 
-export const HB_URL = "http://65.108.7.125:8734";
+export const HB_URL = "https://hb.zoao.dev";
 
 const FLP_QUERY = gql`
   query Transactions($id: String!) {
