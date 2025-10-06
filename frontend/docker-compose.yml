@@ -7,5 +7,5 @@ services:
       dockerfile: Dockerfile
     image: hb-hydration-frontend:latest
     ports:
-      - "8080:5173"
+      - "8080:4173"
     restart: unless-stopped

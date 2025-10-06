@@ -1,35 +1,27 @@
-# Use the official Bun image for building
-FROM oven/bun:latest as builder
-
-# Set working dir
+# ---- Build stage ----
+FROM oven/bun:1.1 AS build
 WORKDIR /app
 
-# Copy package files first to leverage Docker cache for dependencies
-COPY . ./
+# Install deps (better layer caching with lockfile)
+COPY bun.lockb package.json ./
+RUN bun install --frozen-lockfile
 
-# Install dependencies with Bun
-RUN bun install
-
-# Copy the rest of the project
+# Copy the rest and build
 COPY . .
-
-# Build the project for production
+# If your build script is "vite build", keep it; otherwise adjust:
 RUN bun run build
 
-# Use nginx to serve the built files
-FROM nginx:alpine
+# ---- Run stage ----
+FROM oven/bun:1.1 AS run
+WORKDIR /app
 
-# Copy the built files from the builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy only the built assets and package.json for scripts
+COPY --from=build /app/dist ./dist
+COPY package.json bun.lockb ./
 
-# Copy custom nginx config if needed (optional)
-# COPY nginx.conf /etc/nginx/nginx.conf
+# Expose the Vite preview port (default 4173)
+EXPOSE 4173
 
-# Expose port 8080
-EXPOSE 8080
-
-# Create custom nginx config to run on port 8080
-RUN echo 'server { listen 8080; location / { root /usr/share/nginx/html; index index.html; try_files $uri $uri/ /index.html; } }' > /etc/nginx/conf.d/default.conf
-
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Use Vite's production preview server
+# If your script is "preview": "vite preview --host --strictPort"
+CMD ["bun", "run", "preview", "--host", "--strictPort"]
