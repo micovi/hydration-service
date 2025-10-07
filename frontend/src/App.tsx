@@ -17,9 +17,8 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-//export const HB_URL = "/hydration-service/hb-node";
-export const HB_URL = "http://65.108.7.125:8734";
-export const BACKEND_URL = "http://localhost:8081";
+const HB_URL = import.meta.env.VITE_HB_URL || "http://65.108.7.125:8734";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8081";
 
 export const STALE_TIME = 1000 * 60 * 5; // 5 minutes
 
