@@ -293,5 +293,25 @@
 		"name": "AO/wAR 75",
 		"id": "cfJIBVw4ojWnjiQJ1Z6CRU56YnYJPZpaMgAIs-BSi68",
 		"type": "amm"
+	},
+	{
+		"name": "PI/AO 300",
+		"id": "V9y6bTd8UhvrWutoDYogVK-Ot_Xw6MrNsXeDGHoXu0w",
+		"type": "amm"
+	},
+	{
+		"name": "PI/AO 125",
+		"id": "eFZcM3CRaBF1TEy0QdP_h6N53LHIRtb_9MKbKeHa2_Y",
+		"type": "amm"
+	},
+	{
+		"name": "PI/AO 75",
+		"id": "88pi24aSQ7MhSYXxxJadqRZJcHFth0KXHRYeEyEw4Xg",
+		"type": "amm"
+	},
+	{
+		"name": "PI/AO 25",
+		"id": "ZZ-L5YF8-qgtmpcD12kuXAUYNPyy7T-xy1PhaDCZitc",
+		"type": "amm"
 	}
 ]
