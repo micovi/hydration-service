@@ -318,5 +318,95 @@
 		"name": "PI",
 		"id": "4hXj_E-5fAKmo4E8KjgQvuDJKAFk9P2grhycVmISDLs",
 		"type": "token"
-	}
+	},
+	{
+      "name": "Pool 80",
+      "id": "O0WPt9S6HQXYQLdRty9q62VhzlTw9E-eBl48O8BKoXs",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 81",
+      "id": "Z2y50NZ-DjIzQnjTDv-tlqPj9hCQW881S5kNy3nCzWk",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 83",
+      "id": "LPqr7Jh3DPMxttbCRoefEi3CRLI7qwVxpNRjUhGt0bw",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 84",
+      "id": "A6u-wOhZZVdI6pnWb0hBhBYTU7j6JzZyTySFzaolFrE",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 85",
+      "id": "EMm_PJarwgBTFGTXvhyDebkE3ocUe1sAnIs9W5tfFcQ",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 86",
+      "id": "AaijM5dtqNzldluY8gKk7O4zdp5UPv3u0cUEowga5ZI",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 87",
+      "id": "ZMde6bsol6kJJdWL_z90dK2stcyiyRkwpEhUblzY8u0",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 88",
+      "id": "C8nhA7daxSLsvjljKRDGWLac54njWlXzvs0m2OKeE_4",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 89",
+      "id": "bMyl_dysjbyKJBbaT9u9RwgTd527H3WcSvVyGugljvM",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 90",
+      "id": "oeDBkdZJpbSvc8AO7z5KfqBqFj1ULOMkcXyHY-MlYAc",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 91",
+      "id": "zW-R3nHs6pIR1qMV1C-SPHG6UMRIdoV0IskV2IrN-ps",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 92",
+      "id": "Lji25RS3-9LXZe4-gFpdnBMgqyRDqUzZPHWS-HqPWsU",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 93",
+      "id": "4IGzddk67tIZ9zS6AEGO4DA_hq5-LONepeWd3xqt5sM",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 94",
+      "id": "f90WPMT7E3ncJQYpyAUetV57weHG0ZPaK9Kp1uzIsbg",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 95",
+      "id": "GDwK5yJSSglzrjIe3aIXhSLK4UUzgITeDv-e_iBqh9Y",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 96",
+      "id": "2jceFDX70udoqU9VmBvTvlnHLkX5XE5fJYJ3a3LE5tI",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 97",
+      "id": "4MYqWdc4_TcvVU0zoNMzuIZkUnazrSf0d-FsVjEPtSU",
+	  "type": "amm"
+    },
+    {
+      "name": "Pool 99",
+      "id": "dItcG4lIVGSsi_wufAFeiWSkKCmZR25IbUuwykpQUhc",
+	  "type": "amm"
+    }
 ]

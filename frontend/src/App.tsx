@@ -24,8 +24,8 @@ interface Process {
   type: string;
 }
 
-export const HB_URL = "/hydration-service/hb-node";
-//export const HB_URL = "http://65.108.7.125:8734";
+//export const HB_URL = "/hydration-service/hb-node";
+export const HB_URL = "http://65.108.7.125:8734";
 
 export const STALE_TIME = 1000 * 60 * 5; // 5 minutes
 
