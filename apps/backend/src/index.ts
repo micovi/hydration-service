@@ -317,6 +317,40 @@ app.get("/", async (c) => {
   });
 });
 
+app.post("/add-process", async (c) => {
+  const { name, id, type } = await c.req.json();
+
+  if (!name || !id || !type) {
+    return c.json({ error: "Missing required fields" }, 400);
+  }
+
+  // Check if already exists
+  const exists = await redis.sismember("processes", id);
+  if (exists) {
+    return c.json({ error: "Process already exists" }, 400);
+  }
+
+  await redis.sadd("processes", id);
+  await redis.hmset(`process:${id}`, [
+    "name",
+    name,
+    "type",
+    type,
+    "id",
+    id,
+    "latest_slot",
+    "0",
+    "latest_slot_timestamp",
+    new Date(0).toISOString(),
+    "compute_at_slot",
+    "0",
+    "compute_at_slot_timestamp",
+    new Date(0).toISOString(),
+  ]);
+
+  return c.json({ message: "Process added", process: { name, id, type } });
+});
+
 export default {
   port: 8081,
   fetch: app.fetch,
