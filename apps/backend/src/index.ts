@@ -248,7 +248,7 @@ app.get("/cron/every/:processId", async (c) => {
 
   // Trigger every cron job via HB
   const rs = await fetch(
-    `${HB_URL}/~cron@1.0/every?cron-path=/${processId}~process@1.0/now&interval=5m`
+    `${HB_URL}/~cron@1.0/every?cron-path=/${processId}~process@1.0/now&interval=5-minutes`
   );
 
   if (!rs.ok) {
