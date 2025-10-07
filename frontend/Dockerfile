@@ -6,6 +6,11 @@ WORKDIR /app
 COPY . ./
 RUN bun install
 
+ARG VITE_BACKEND_URL
+ARG VITE_HB_URL
+ENV VITE_BACKEND_URL=${VITE_BACKEND_URL}
+ENV VITE_HB_URL=${VITE_HB_URL}
+
 # If your build script is "vite build", keep it; otherwise adjust:
 RUN bunx --bun vite build
 

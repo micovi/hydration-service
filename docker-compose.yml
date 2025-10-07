@@ -22,12 +22,12 @@ services:
       - redis
     restart: unless-stopped
   frontend:
-    environment:
-      - VITE_BACKEND_URL=http://backend:8081
-      - VITE_HB_URL=/hydration-service/hb-node
     build:
       context: ./frontend
       dockerfile: ./Dockerfile
+      args:
+        - VITE_BACKEND_URL=http://backend:8081
+        - VITE_HB_URL=/hydration-service/hb-node
     ports:
       - "8080:4173"
     depends_on:
