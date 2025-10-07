@@ -419,6 +419,7 @@ function DisplayReserves({ process }: { process: ProcessRecord }) {
       return out;
     },
     staleTime: STALE_TIME,
+    enabled: process.compute_at_slot === process.latest_slot,
   });
 
   const {
@@ -448,6 +449,7 @@ function DisplayReserves({ process }: { process: ProcessRecord }) {
       return data;
     },
     staleTime: STALE_TIME,
+    enabled: process.compute_at_slot === process.latest_slot,
   });
 
   const tokens = Array.from(
@@ -456,7 +458,7 @@ function DisplayReserves({ process }: { process: ProcessRecord }) {
 
   return (
     <div>
-      {tokens.length > 0 ? (
+      {process.compute_at_slot === process.latest_slot && tokens.length > 0 ? (
         <div className="overflow-x-auto opacity-60 hover:opacity-100">
           <table className="min-w-full text-sm !m-0 !border-0">
             <thead>
