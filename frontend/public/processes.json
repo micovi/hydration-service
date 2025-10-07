@@ -313,5 +313,10 @@
 		"name": "PI/AO 25",
 		"id": "ZZ-L5YF8-qgtmpcD12kuXAUYNPyy7T-xy1PhaDCZitc",
 		"type": "amm"
+	},
+	{
+		"name": "PI",
+		"id": "4hXj_E-5fAKmo4E8KjgQvuDJKAFk9P2grhycVmISDLs",
+		"type": "token"
 	}
 ]

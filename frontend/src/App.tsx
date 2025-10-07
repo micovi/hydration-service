@@ -4,6 +4,7 @@ import { Client, cacheExchange, fetchExchange, gql } from "urql";
 import { useQueryState, parseAsBoolean } from "nuqs";
 import { CheckSquare, RefreshCwIcon } from "lucide-react";
 import { useLiveQuery } from "dexie-react-hooks";
+import { Fragment } from "react";
 
 import {
   Table,
@@ -13,9 +14,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { cn } from "./lib/utils";
-import { Button } from "./components/ui/button";
-import { db, type ProcessRecord } from "./lib/db";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { db, type ProcessRecord } from "@/lib/db";
 
 interface Process {
   name: string;
@@ -135,12 +136,12 @@ function App() {
         </Table>
       )}
 
-      {debug && (
+      {/*  {debug && (
         <div className="my-4 p-4 border rounded">
           <h2 className="text-2xl mb-2">Add New Process</h2>
           <AddProcessForm />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
@@ -239,69 +240,238 @@ function ProcessRecordRow({ process }: { process: Process }) {
   };
 
   return (
-    <TableRow key={process.id}>
-      <TableCell className="font-mono">{process.name}</TableCell>
-      <TableCell className="font-mono">
-        <a
-          href={`https://ao.link/#/entity/${process.id}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {process.id}
-        </a>
-      </TableCell>
-      <TableCell>{process.type}</TableCell>
-      <TableCell className="font-mono">
-        {latestSlot ||
-          (isLoadingLatestSlot ? "Loading..." : errorLatestSlot?.message)}
-      </TableCell>
-      <TableCell
-        className={cn(
-          "font-mono",
-          latestSlot &&
-            computeAtSlot &&
-            (Number(computeAtSlot) < Number(latestSlot)
-              ? "text-red-500"
-              : "text-green-500")
-        )}
-      >
-        {computeAtSlot ||
-          (isLoadingComputeAtSlot ? "Loading..." : errorComputeAtSlot?.message)}
-      </TableCell>
-      <TableCell>
-        <Button
-          onClick={reloadData}
-          type="button"
-          disabled={isReloadingComputeAtSlot || isReloadingLatestSlot}
-        >
-          <RefreshCwIcon
-            className={cn(
-              isReloadingComputeAtSlot ||
-                (isReloadingLatestSlot && "animate-spin")
-            )}
-          />
-        </Button>
-      </TableCell>
-      {debug && (
-        <TableCell className="flex flex-row gap-1">
-          <OnceButton process={process} />
-          <EveryButton process={process} />
-          {checkpoint ? (
-            <Button
-              className="font-mono"
-              onClick={() => loadCheckpointMutation.mutate()}
-              type="button"
-            >
-              <CheckSquare />
-            </Button>
-          ) : isLoadingCheckpoint ? (
-            "..."
-          ) : (
-            errorCheckpoint?.message
-          )}
+    <Fragment key={process.id}>
+      <TableRow>
+        <TableCell className="font-mono">{process.name}</TableCell>
+        <TableCell className="font-mono">
+          <a
+            href={`https://ao.link/#/entity/${process.id}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {process.id}
+          </a>
         </TableCell>
+        <TableCell>{process.type}</TableCell>
+        <TableCell className="font-mono">
+          {latestSlot ||
+            (isLoadingLatestSlot ? "Loading..." : errorLatestSlot?.message)}
+        </TableCell>
+        <TableCell
+          className={cn(
+            "font-mono",
+            latestSlot &&
+              computeAtSlot &&
+              (Number(computeAtSlot) < Number(latestSlot)
+                ? "text-red-500"
+                : "text-green-500")
+          )}
+        >
+          {computeAtSlot ||
+            (isLoadingComputeAtSlot
+              ? "Loading..."
+              : errorComputeAtSlot?.message)}
+        </TableCell>
+        <TableCell>
+          <Button
+            onClick={reloadData}
+            type="button"
+            disabled={isReloadingComputeAtSlot || isReloadingLatestSlot}
+          >
+            <RefreshCwIcon
+              className={cn(
+                isReloadingComputeAtSlot ||
+                  (isReloadingLatestSlot && "animate-spin")
+              )}
+            />
+          </Button>
+        </TableCell>
+        {debug && (
+          <TableCell className="flex flex-row gap-1">
+            <OnceButton process={process} />
+            <EveryButton process={process} />
+            {checkpoint ? (
+              <Button
+                className="font-mono"
+                onClick={() => loadCheckpointMutation.mutate()}
+                type="button"
+                disabled={loadCheckpointMutation.isPending}
+              >
+                <CheckSquare />
+              </Button>
+            ) : isLoadingCheckpoint ? (
+              "..."
+            ) : (
+              errorCheckpoint?.message
+            )}
+          </TableCell>
+        )}
+      </TableRow>
+
+      {process.type === "amm" && (
+        <TableRow className="!p-0 !border-0">
+          <TableCell
+            colSpan={debug ? 7 : 6}
+            className="bg-gray-50 !p-0 !border-0"
+          >
+            <DisplayReserves process={process} />
+          </TableCell>
+        </TableRow>
       )}
-    </TableRow>
+    </Fragment>
+  );
+}
+
+function DisplayReserves({ process }: { process: Process }) {
+  const AO_CU_URL = "https://cu.ao-testnet.xyz";
+
+  const {
+    data: reserves,
+    isLoading: isLoadingReserves,
+    error: errorReserves,
+  } = useQuery<Record<string, string>>({
+    queryKey: ["aoReserves", process.id],
+    queryFn: async () => {
+      const payload = {
+        Id: "1234",
+        Target: process.id,
+        Owner: "1234",
+        Anchor: "0",
+        Data: "1234",
+        Tags: [
+          { name: "Action", value: "Get-Reserves" },
+          { name: "Data-Protocol", value: "ao" },
+          { name: "Type", value: "Message" },
+          { name: "Variant", value: "ao.TN.1" },
+        ],
+      };
+
+      const url = `${AO_CU_URL}/dry-run?process-id=${encodeURIComponent(
+        process.id
+      )}`;
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`AO dry-run failed: ${res.status} ${text}`);
+      }
+
+      const data = (await res.json()) as {
+        Messages: { Tags: { name: string; value: string }[] | null }[];
+      };
+      const out: Record<string, string> = {};
+      const messages = data?.Messages;
+      if (Array.isArray(messages) && messages.length > 0) {
+        const tags = messages[0]?.Tags ?? [];
+
+        const skip = new Set([
+          "Action",
+          "Data-Protocol",
+          "Type",
+          "Variant",
+          "Reference",
+        ]);
+        for (const tag of tags) {
+          if (!tag?.name) continue;
+          if (skip.has(tag.name)) continue;
+          // Token addresses are 43 characters long
+          if (tag.name.length === 43) {
+            out[tag.name] = tag.value ?? "";
+          }
+        }
+      }
+
+      return out;
+    },
+    staleTime: STALE_TIME,
+  });
+
+  const {
+    data: hbReserves,
+    isLoading: isLoadingHbReserves,
+    error: errorHbReserves,
+  } = useQuery<Record<string, string>>({
+    queryKey: ["hbReserves", process.id],
+    queryFn: async () => {
+      const res = await fetch(
+        `${HB_URL}/${process.id}~process@1.0/now/reserves`
+      );
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`HB reserves failed: ${res.status} ${text}`);
+      }
+
+      const data = (await res.json()) as Record<string, string>;
+
+      // Filter out non 43-character keys (not token addresses)
+      for (const key of Object.keys(data)) {
+        if (key.length !== 43) {
+          delete data[key];
+        }
+      }
+
+      return data;
+    },
+    staleTime: STALE_TIME,
+  });
+
+  const tokens = Array.from(
+    new Set([...Object.keys(reserves ?? {}), ...Object.keys(hbReserves ?? {})])
+  ).sort();
+
+  return (
+    <div>
+      {isLoadingReserves || isLoadingHbReserves ? (
+        <p className="p-2 text-center opacity-30">Loading reserves...</p>
+      ) : errorReserves || errorHbReserves ? (
+        <p className="text-red-500">
+          {(errorReserves as Error)?.message ||
+            (errorHbReserves as Error)?.message}
+        </p>
+      ) : tokens.length > 0 ? (
+        <div className="overflow-x-auto opacity-60 hover:opacity-100">
+          <table className="min-w-full text-sm !m-0 !border-0">
+            <thead>
+              <tr className="text-left">
+                <th className="px-2 py-1 font-mono w-32">Token</th>
+                <th className="px-2 py-1 font-mono">AO (DryRun)</th>
+                <th className="px-2 py-1 font-mono">HB (/now)</th>
+                <th className="px-2 py-1 font-mono">Difference</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tokens.map((token) => {
+                const aoValue = reserves?.[token] ?? "-";
+                const hbValue = hbReserves?.[token] ?? "-";
+                const mismatch =
+                  aoValue !== "-" && hbValue !== "-" && aoValue !== hbValue;
+                return (
+                  <tr key={token} className={mismatch ? "text-red-500" : ""}>
+                    <td className="px-2 py-1 font-mono">{token}</td>
+                    <td className="px-2 py-1 font-mono">{aoValue}</td>
+                    <td className="px-2 py-1 font-mono">{hbValue}</td>
+                    <td className="px-2 py-1 font-mono">
+                      {aoValue !== "-" && hbValue !== "-"
+                        ? Number(hbValue) !== Number(aoValue)
+                          ? "Yes"
+                          : "No"
+                        : "-"}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p>No reserves found.</p>
+      )}
+    </div>
   );
 }
 
@@ -494,95 +664,6 @@ function EveryButton({ process }: { process: Process }) {
         <span>{startMutation.isPending ? "..." : "*/5"}</span>
       )}
     </Button>
-  );
-}
-
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-function AddProcessForm() {
-  const formSchema = z.object({
-    name: z.string().min(2, {
-      message: "Name must be at least 2 characters.",
-    }),
-    id: z.string().min(2, {
-      message: "ID must be at least 2 characters.",
-    }),
-    type: z.string().min(2, {
-      message: "Type must be at least 2 characters.",
-    }),
-  });
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      id: "",
-      type: "amm",
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
-
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="AMM POOL" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="id"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>ID</FormLabel>
-              <FormControl>
-                <Input placeholder="xyz123" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="type"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Type</FormLabel>
-              <FormControl>
-                <Input placeholder="amm" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
-    </Form>
   );
 }
 
