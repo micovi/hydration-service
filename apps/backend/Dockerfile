@@ -10,4 +10,4 @@ EXPOSE 8081
 
 # Use Vite's production preview server
 # If your script is "preview": "vite preview --host --strictPort"
-CMD ["bun", "run", "start"]
+CMD ["bun", "run", "src/index.ts"]
