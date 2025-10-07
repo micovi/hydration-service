@@ -26,7 +26,7 @@ services:
       context: ./frontend
       dockerfile: ./Dockerfile
       args:
-        - VITE_BACKEND_URL=http://backend:8081
+        - VITE_BACKEND_URL=/hydration-service/backend
         - VITE_HB_URL=/hydration-service/hb-node
     ports:
       - "8080:4173"

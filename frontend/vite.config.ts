@@ -20,6 +20,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (p) => p.replace(/^\/hydration-service\/hb-node/, ""),
       },
+      "/hydration-service/backend": {
+        target: "http://backend:8081",
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/hydration-service\/backend/, ""),
+      },
     },
   },
 });
