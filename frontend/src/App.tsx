@@ -3,8 +3,8 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Client, cacheExchange, fetchExchange, gql } from "urql";
 import { useQueryState, parseAsBoolean } from "nuqs";
 import { CheckSquare, RefreshCwIcon } from "lucide-react";
-import { useLiveQuery } from "dexie-react-hooks";
 import { Fragment } from "react";
+import { toast } from "sonner";
 
 import {
   Table,
@@ -16,16 +16,10 @@ import {
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { db, type ProcessRecord } from "@/lib/db";
 
-interface Process {
-  name: string;
-  id: string;
-  type: string;
-}
-
-export const HB_URL = "/hydration-service/hb-node";
-//export const HB_URL = "http://65.108.7.125:8734";
+//export const HB_URL = "/hydration-service/hb-node";
+export const HB_URL = "http://65.108.7.125:8734";
+export const BACKEND_URL = "http://localhost:8081";
 
 export const STALE_TIME = 1000 * 60 * 5; // 5 minutes
 
@@ -58,6 +52,17 @@ const graphqlClient = new Client({
   fetchOptions: { method: "POST" },
 });
 
+interface ProcessRecord {
+  id: string;
+  name: string;
+  type: string;
+  latest_slot: string;
+  latest_slot_timestamp: string;
+  compute_at_slot: string;
+  compute_at_slot_timestamp: string;
+  taskId?: string;
+}
+
 function App() {
   const [debug] = useQueryState("debug", parseAsBoolean.withDefault(false));
   const queryClient = useQueryClient();
@@ -69,29 +74,15 @@ function App() {
   } = useQuery<ProcessRecord[]>({
     queryKey: ["processes"],
     queryFn: async () => {
-      const response = await fetch("/hydration-service/processes.json");
+      const response = await fetch(BACKEND_URL);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data = (await response.json()) as ProcessRecord[];
+      const data = (await response.json()) as { processes: ProcessRecord[] };
 
-      for (const process of data) {
-        const existing = await db.processes.get(process.id);
-        if (!existing) {
-          await db.processes.upsert(process.id, {
-            ...process,
-            checkpoint: null,
-            once: null,
-            every: null,
-          });
-
-          console.log(`Inserted process ${process.id} into IndexedDB`);
-        }
-      }
-
-      return data;
+      return data.processes;
     },
   });
 
@@ -146,7 +137,7 @@ function App() {
   );
 }
 
-function ProcessRecordRow({ process }: { process: Process }) {
+function ProcessRecordRow({ process }: { process: ProcessRecord }) {
   const queryClient = useQueryClient();
   const [debug] = useQueryState("debug", parseAsBoolean.withDefault(false));
 
@@ -167,38 +158,44 @@ function ProcessRecordRow({ process }: { process: Process }) {
 
       const edges = result.data?.transactions.edges;
       if (edges && edges.length > 0) {
-        const processInDb = await db.processes.get(process.id);
-
-        if (processInDb?.checkpoint === edges[0].node.id) {
-          return edges[0].node.id;
-        }
-
-        await db.processes.upsert(process.id, { checkpoint: edges[0].node.id });
-
         return edges[0].node.id;
       }
 
       return null;
     },
-    staleTime: STALE_TIME,
+    staleTime: STALE_TIME * 5, // 25 minutes
   });
 
-  const {
+  /*   const {
     data: computeAtSlot,
     isLoading: isLoadingComputeAtSlot,
     isFetching: isReloadingComputeAtSlot,
     error: errorComputeAtSlot,
   } = useQuery<string>({
     queryKey: ["computeAtSlot", process.id],
-    queryFn: () =>
-      fetch(`${HB_URL}/${process.id}~process@1.0/compute/at-slot`).then(
-        (res) => {
-          if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}`);
-          }
-          return res.text();
-        }
-      ),
+    queryFn: async ({ signal }) => {
+      const processInDb = await db.processes.get(process.id);
+
+      const result = await fetch(
+        `${HB_URL}/${process.id}~process@1.0/compute/at-slot`,
+        { signal }
+      );
+
+      if (!result.ok) {
+        throw new Error(`HTTP error! status: ${result.status}`);
+      }
+
+      const newSlot = await result.text();
+
+      // Save to IndexedDB
+      if (processInDb?.computeAtSlot !== Number(newSlot)) {
+        await db.processes.upsert(process.id, {
+          computeAtSlot: Number(newSlot),
+        });
+      }
+
+      return newSlot;
+    },
     staleTime: STALE_TIME,
   });
 
@@ -218,6 +215,7 @@ function ProcessRecordRow({ process }: { process: Process }) {
       }),
     staleTime: STALE_TIME,
   });
+ */
 
   const loadCheckpointMutation = useMutation({
     mutationFn: async () => {
@@ -234,9 +232,35 @@ function ProcessRecordRow({ process }: { process: Process }) {
     },
   });
 
+  const reloadSlotsMutation = useMutation({
+    mutationFn: async () => {
+      await fetch(`${BACKEND_URL}/compute/at-slot/${process.id}`);
+      await fetch(`${BACKEND_URL}/slot/current/${process.id}`);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["processes"] });
+    },
+  });
+
+  const stopTaskMutation = useMutation({
+    mutationFn: async () => {
+      const rs = await fetch(`${BACKEND_URL}/cron/stop/${process.id}`);
+
+      const responseText = await rs.text();
+      console.log(rs.status, responseText);
+
+      return responseText;
+    },
+    onSuccess: async (responseText) => {
+      queryClient.invalidateQueries({ queryKey: ["processes"] });
+      console.log("Stopped 'once' process for:", process.id);
+      toast.success(responseText);
+    },
+  });
+
   const reloadData = () => {
-    queryClient.invalidateQueries({ queryKey: ["computeAtSlot", process.id] });
-    queryClient.invalidateQueries({ queryKey: ["latestSlot", process.id] });
+    queryClient.invalidateQueries({ queryKey: ["aoReserves", process.id] });
+    queryClient.invalidateQueries({ queryKey: ["hbReserves", process.id] });
   };
 
   return (
@@ -253,43 +277,50 @@ function ProcessRecordRow({ process }: { process: Process }) {
           </a>
         </TableCell>
         <TableCell>{process.type}</TableCell>
-        <TableCell className="font-mono">
-          {latestSlot ||
-            (isLoadingLatestSlot ? "Loading..." : errorLatestSlot?.message)}
-        </TableCell>
+        <TableCell className="font-mono">{process.latest_slot}</TableCell>
         <TableCell
           className={cn(
             "font-mono",
-            latestSlot &&
-              computeAtSlot &&
-              (Number(computeAtSlot) < Number(latestSlot)
+            process.latest_slot &&
+              process.compute_at_slot &&
+              (Number(process.compute_at_slot) < Number(process.latest_slot)
                 ? "text-red-500"
                 : "text-green-500")
           )}
         >
-          {computeAtSlot ||
-            (isLoadingComputeAtSlot
-              ? "Loading..."
-              : errorComputeAtSlot?.message)}
+          {process.compute_at_slot}
         </TableCell>
         <TableCell>
           <Button
-            onClick={reloadData}
+            onClick={() => {
+              reloadSlotsMutation.mutate();
+            }}
             type="button"
-            disabled={isReloadingComputeAtSlot || isReloadingLatestSlot}
+            disabled={reloadSlotsMutation.isPending}
           >
             <RefreshCwIcon
-              className={cn(
-                isReloadingComputeAtSlot ||
-                  (isReloadingLatestSlot && "animate-spin")
-              )}
+              className={cn(reloadSlotsMutation.isPending && "animate-spin")}
             />
           </Button>
         </TableCell>
         {debug && (
           <TableCell className="flex flex-row gap-1">
-            <OnceButton process={process} />
-            <EveryButton process={process} />
+            {process.taskId ? (
+              <Button
+                className="font-mono"
+                onClick={() => stopTaskMutation.mutate()}
+                type="button"
+                disabled={stopTaskMutation.isPending}
+              >
+                stop cron
+              </Button>
+            ) : (
+              <>
+                <OnceButton process={process} />
+                <EveryButton process={process} />
+              </>
+            )}
+
             {checkpoint ? (
               <Button
                 className="font-mono"
@@ -322,13 +353,13 @@ function ProcessRecordRow({ process }: { process: Process }) {
   );
 }
 
-function DisplayReserves({ process }: { process: Process }) {
+function DisplayReserves({ process }: { process: ProcessRecord }) {
   const AO_CU_URL = "https://cu.ao-testnet.xyz";
 
   const {
     data: reserves,
     isLoading: isLoadingReserves,
-    error: errorReserves,
+    isFetching: isReloadingReserves,
   } = useQuery<Record<string, string>>({
     queryKey: ["aoReserves", process.id],
     queryFn: async () => {
@@ -394,7 +425,7 @@ function DisplayReserves({ process }: { process: Process }) {
   const {
     data: hbReserves,
     isLoading: isLoadingHbReserves,
-    error: errorHbReserves,
+    isFetching: isReloadingHbReserves,
   } = useQuery<Record<string, string>>({
     queryKey: ["hbReserves", process.id],
     queryFn: async () => {
@@ -426,14 +457,7 @@ function DisplayReserves({ process }: { process: Process }) {
 
   return (
     <div>
-      {isLoadingReserves || isLoadingHbReserves ? (
-        <p className="p-2 text-center opacity-30">Loading reserves...</p>
-      ) : errorReserves || errorHbReserves ? (
-        <p className="text-red-500">
-          {(errorReserves as Error)?.message ||
-            (errorHbReserves as Error)?.message}
-        </p>
-      ) : tokens.length > 0 ? (
+      {tokens.length > 0 ? (
         <div className="overflow-x-auto opacity-60 hover:opacity-100">
           <table className="min-w-full text-sm !m-0 !border-0">
             <thead>
@@ -453,8 +477,16 @@ function DisplayReserves({ process }: { process: Process }) {
                 return (
                   <tr key={token} className={mismatch ? "text-red-500" : ""}>
                     <td className="px-2 py-1 font-mono">{token}</td>
-                    <td className="px-2 py-1 font-mono">{aoValue}</td>
-                    <td className="px-2 py-1 font-mono">{hbValue}</td>
+                    <td className="px-2 py-1 font-mono">
+                      {isLoadingReserves || isReloadingReserves
+                        ? "loading..."
+                        : aoValue}
+                    </td>
+                    <td className="px-2 py-1 font-mono">
+                      {isLoadingHbReserves || isReloadingHbReserves
+                        ? "loading..."
+                        : hbValue}
+                    </td>
                     <td className="px-2 py-1 font-mono">
                       {aoValue !== "-" && hbValue !== "-"
                         ? Number(hbValue) !== Number(aoValue)
@@ -475,17 +507,12 @@ function DisplayReserves({ process }: { process: Process }) {
   );
 }
 
-function OnceButton({ process }: { process: Process }) {
-  const hasStarted = useLiveQuery(async () => {
-    const processInDb = await db.processes.get(process.id);
-    return processInDb?.once !== null;
-  }, [process.id]);
+function OnceButton({ process }: { process: ProcessRecord }) {
+  const queryClient = useQueryClient();
 
   const startMutation = useMutation({
     mutationFn: async () => {
-      const rs = await fetch(
-        `${HB_URL}/~cron@1.0/once?cron-path=/${process.id}~process@1.0/now`
-      );
+      const rs = await fetch(`${BACKEND_URL}/cron/once/${process.id}`);
 
       const responseId = await rs.text();
 
@@ -493,67 +520,12 @@ function OnceButton({ process }: { process: Process }) {
 
       return responseId;
     },
-    onSuccess: async (responseId) => {
-      const processInDb = await db.processes.get(process.id);
-
-      if (processInDb?.once !== responseId) {
-        await db.processes.upsert(process.id, { once: responseId });
-      }
-
-      console.log(
-        "Triggered once for process:",
-        process.id,
-        "Response ID:",
-        responseId
-      );
+    onSuccess: async (responseText) => {
+      queryClient.invalidateQueries({ queryKey: ["processes"] });
+      console.log(responseText);
+      toast.success(`Task created with id: ${responseText}`);
     },
   });
-
-  const stopMutation = useMutation({
-    mutationFn: async () => {
-      const processInDb = await db.processes.get(process.id);
-
-      const taskId = processInDb?.once;
-
-      if (!taskId) {
-        throw new Error("No 'once' process to stop.");
-      }
-
-      const rs = await fetch(`${HB_URL}/~cron@1.0/stop?task=${taskId}`);
-
-      if (!rs.ok) {
-        const rtext = await rs.text();
-        console.log("Response text:", rtext);
-
-        if (rtext.includes("Task not found")) {
-          await db.processes.upsert(process.id, { once: null });
-          console.log("Cleared stale 'once' process for:", process.id);
-          return;
-        }
-
-        throw new Error(`HTTP error! status: ${rs.status}`);
-      }
-
-      console.log(rs.status, await rs.text());
-    },
-    onSuccess: async () => {
-      await db.processes.upsert(process.id, { once: null });
-      console.log("Stopped 'once' process for:", process.id);
-    },
-  });
-
-  if (hasStarted) {
-    return (
-      <Button
-        className="font-mono"
-        onClick={() => stopMutation.mutate()}
-        disabled={stopMutation.isPending}
-        type="button"
-      >
-        {stopMutation.isPending ? "..." : "■"}
-      </Button>
-    );
-  }
 
   return (
     <Button
@@ -571,17 +543,11 @@ function OnceButton({ process }: { process: Process }) {
   );
 }
 
-function EveryButton({ process }: { process: Process }) {
-  const hasStarted = useLiveQuery(async () => {
-    const processInDb = await db.processes.get(process.id);
-    return processInDb?.every !== null;
-  }, [process.id]);
-
+function EveryButton({ process }: { process: ProcessRecord }) {
+  const queryClient = useQueryClient();
   const startMutation = useMutation({
     mutationFn: async () => {
-      const rs = await fetch(
-        `${HB_URL}/~cron@1.0/every?cron-path=/${process.id}~process@1.0/now&interval=5-minutes`
-      );
+      const rs = await fetch(`${BACKEND_URL}/cron/every/${process.id}`);
 
       const responseId = await rs.text();
 
@@ -589,68 +555,12 @@ function EveryButton({ process }: { process: Process }) {
 
       return responseId;
     },
-    onSuccess: async (responseId) => {
-      const processInDb = await db.processes.get(process.id);
-
-      if (processInDb?.every !== responseId) {
-        await db.processes.upsert(process.id, { every: responseId });
-      }
-
-      console.log(
-        "Set up every 5 minutes for process:",
-        process.id,
-        "Response ID:",
-        responseId
-      );
+    onSuccess: async (responseText) => {
+      queryClient.invalidateQueries({ queryKey: ["processes"] });
+      console.log(responseText);
+      toast.success(`Task created with id: ${responseText}`);
     },
   });
-
-  const stopMutation = useMutation({
-    mutationFn: async () => {
-      const processInDb = await db.processes.get(process.id);
-
-      const taskId = processInDb?.every;
-
-      if (!taskId) {
-        throw new Error("No 'every' process to stop.");
-      }
-
-      const rs = await fetch(`${HB_URL}/~cron@1.0/stop?task=${taskId}`);
-
-      if (!rs.ok) {
-        const rtext = await rs.text();
-        console.log("Response text:", rtext);
-
-        if (rtext.includes("Task not found")) {
-          await db.processes.upsert(process.id, { every: null });
-          console.log("Cleared stale 'every' process for:", process.id);
-          return;
-        }
-
-        throw new Error(`HTTP error! status: ${rs.status}`);
-      }
-
-      console.log(rs.status, await rs.text());
-    },
-    onSuccess: async () => {
-      await db.processes.upsert(process.id, { every: null });
-      console.log("Stopped 'every' process for:", process.id);
-    },
-  });
-
-  if (hasStarted) {
-    return (
-      <Button
-        className="font-mono"
-        onClick={() => stopMutation.mutate()}
-        disabled={stopMutation.isPending}
-        type="button"
-      >
-        {stopMutation.isPending ? "..." : "■"}
-      </Button>
-    );
-  }
-
   return (
     <Button
       className="font-mono"

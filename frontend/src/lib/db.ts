@@ -8,9 +8,10 @@ interface ProcessRecord {
   checkpoint: string | null;
   once: string | null;
   every: string | null;
+  computeAtSlot: number | null;
 }
 
-const db = new Dexie("ProcessesDatabase") as Dexie & {
+const db = new Dexie("HYDRATION_SERVICE") as Dexie & {
   processes: EntityTable<
     ProcessRecord,
     "id" // primary key "id" (for the typings only)
@@ -19,7 +20,7 @@ const db = new Dexie("ProcessesDatabase") as Dexie & {
 
 // Schema declaration:
 db.version(1).stores({
-  processes: "++id, name, type, checkpoint, once, every", // primary key "id" (for the runtime!)
+  processes: "++id, name, type, checkpoint, once, every, computeAtSlot", // primary key "id" (for the runtime!)
 });
 
 export type { ProcessRecord };

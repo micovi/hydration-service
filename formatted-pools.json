@@ -1,0 +1,1807 @@
+[
+  {
+    "id": "Aq06mAqBAMKZ9n8WRvkXhz6fAcW4QlpJSAfCQIOJH8Y",
+    "name": "Botega LP AO/PIPI 75",
+    "type": "amm"
+  },
+  {
+    "id": "FQgh4kSEKq_LTi0gtN72MM7gPo1BoqaLyj7n0vEDSYI",
+    "name": "Botega LP qAR/DUM 25",
+    "type": "amm"
+  },
+  {
+    "id": "oeoV6MKQHnB0WQjRUuQgtUeRkDzxU4DlSJm4u2LgNN4",
+    "name": "Botega LP qAR/RYB 25",
+    "type": "amm"
+  },
+  {
+    "id": "_MJbfFO79PJvVuKcqv9fF0_TABK2RlMcTJYHpyDB_8I",
+    "name": "Botega LP qAR/ALAON 25",
+    "type": "amm"
+  },
+  {
+    "id": "aOeJAK6KKbcXbJ1ihbpGx3okJ7e_oZWNS-XcX5fYUCY",
+    "name": "Botega LP CATWEAVE/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "I7TLNs8nv0gEgjyfzC0yIpXtaYePgfq8EIeR0b1FhTc",
+    "name": "Botega LP AO/USDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "3feQGNXoOGpTqJmS69wMN2xmMk5SpkDN9eH3jloolG4",
+    "name": "Botega LP AOS/AO 300",
+    "type": "amm"
+  },
+  {
+    "id": "b24BEv-rPc31MT7Jf4w3k9XUFID9_UN5p3uGvEmDnHA",
+    "name": "Botega LP btc/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "V-aAEX7HVu8AMOSqIhAR6myLrCZh2DOhX12OSYv5ypc",
+    "name": "Botega LP qAR/SEND 25",
+    "type": "amm"
+  },
+  {
+    "id": "ClDQh61QBKDNkQbrG-e7FzQvJIqWQkal9XSlNZRiWyI",
+    "name": "Botega LP wAR/DOGAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "1P7Zl2FDdA09HTXDj0DxKatryPhRj4ES2JO8xXCcV78",
+    "name": "Botega LP wAR/X35BG 25",
+    "type": "amm"
+  },
+  {
+    "id": "n6v-AxqxvxigDr2iH-tW1_q7z2kO6WMCudDESOCXKRg",
+    "name": "Botega LP wAR/JOOSE 25",
+    "type": "amm"
+  },
+  {
+    "id": "fKWc1bhmZrPv8bUDtYqI-_zf2WJXL3gLFEzxOO6lan0",
+    "name": "Botega LP TST/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "IO_1AR_hoU-pDG3SDgz7DKHbpcf_rl-m6hR0syPXu4Q",
+    "name": "Botega LP wAR/ARCHE 25",
+    "type": "amm"
+  },
+  {
+    "id": "4N-avzg2oLBIRSQkox2Fb-dGoY7ip8rnNTdN03QuwvQ",
+    "name": "Botega LP SMITH/AGENT 25",
+    "type": "amm"
+  },
+  {
+    "id": "di3SbaYlwnkvt4-X7MmPTTUm24bxJFn-p4GSAy0N-ko",
+    "name": "Botega LP AO/TKTHB 25",
+    "type": "amm"
+  },
+  {
+    "id": "fhdbyMMNvdC2zQMgEa9BS3YOaXbuSt8RDrTt59Iw2uI",
+    "name": "Botega LP AO/TKTHB 75",
+    "type": "amm"
+  },
+  {
+    "id": "SKH_iMMYPaK9vycTf8yrFXtwk9DHcyKly9mj_MHcMJ8",
+    "name": "Botega LP AO/BRRBRR 25",
+    "type": "amm"
+  },
+  {
+    "id": "otTTLgQ8Qn0X1pKJVNXwUrGfO6eBTbHNs4sqZ6pGjAg",
+    "name": "Botega LP B3TOKEN/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "SbsFLYkHi4TDGpBIFhVFWzKwKn_CnP9U_b9jZS7hY_Y",
+    "name": "Botega LP DUMDUM/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Z4DDOEw5BtZUOjv5NoPE-Aq0fQ0NZsfgJVDf74Lj0QE",
+    "name": "Botega LP GOOB/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "MdhKb-YoZC0I9Vn74ENhy3MKE7fHEHXRmYJk2ezVfEM",
+    "name": "Botega LP wUSDC/GAME 25",
+    "type": "amm"
+  },
+  {
+    "id": "wDCJJwSRaLEUR8-80UwlzP2J0ex3TtGsss6OjMwThbE",
+    "name": "Botega LP BLAH/wAR 125",
+    "type": "amm"
+  },
+  {
+    "id": "eFZcM3CRaBF1TEy0QdP_h6N53LHIRtb_9MKbKeHa2_Y",
+    "name": "Botega LP PI/AO 125",
+    "type": "amm"
+  },
+  {
+    "id": "YP1SFDjg-pdz405dwJ_JITpp28Ae7AeemeDWRWJ3_J4",
+    "name": "Botega LP FT2/FT1 300",
+    "type": "amm"
+  },
+  {
+    "id": "IVO1G9zT7Q9IL_DgbiPooRyGZuchIkKrOYXCmMOR3kQ",
+    "name": "Botega LP USDA/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "NyDgWkkkgOt0Y8cCuf15L0vlcmCkmmN9b6ZnIh1GZwY",
+    "name": "Botega LP CHEEK/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "FW4gOxJZjeY2Nu0BKtNnmRszufyogyislInWY--Z8UQ",
+    "name": "Botega LP MOC/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "oLxEOaQMgTFvCdMzYKXZx3NKdVFoHJHgwdyrWuvxF3g",
+    "name": "Botega LP qAR/CATWEAVE 25",
+    "type": "amm"
+  },
+  {
+    "id": "bbbVW1d-ROSr-vr4fSwSYloUno2hTLBvuEFMOJq0zNA",
+    "name": "Botega LP btc3.0/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "y3qUfBn-pFyVrYE4LyHGo_wVcABrkkKz2FQbnIV1S2s",
+    "name": "Botega LP VMKS/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "cCbi4ww8P2vbliNUz1uS91TxJqwsCwE05Asso0-VLRA",
+    "name": "Botega LP wAR/MEAOW 25",
+    "type": "amm"
+  },
+  {
+    "id": "uSuvCl2GLgVuX5WTmBJfjcTe--yMyuXeuC5F-5Hboio",
+    "name": "Botega LP tARIO/TRUNK 25",
+    "type": "amm"
+  },
+  {
+    "id": "cT-lzIxPC41nzfkqqmgRuj9csiUmz3Fa1Q2zOmsBwc8",
+    "name": "Botega LP wAR/NOKIT 25",
+    "type": "amm"
+  },
+  {
+    "id": "zwf9Rs07dflF3GZgA7zK5W9uD8xsgEh2fMscvJAhf7Q",
+    "name": "Botega LP tARIO/HUEL 25",
+    "type": "amm"
+  },
+  {
+    "id": "ZMde6bsol6kJJdWL_z90dK2stcyiyRkwpEhUblzY8u0",
+    "name": "Botega LP wAR/HAPPY 25",
+    "type": "amm"
+  },
+  {
+    "id": "XPLl4BTGnwPDp9DKHfbBu-F9ea34oaAtx-Ip9UucFXM",
+    "name": "Botega LP NUTS/SXAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "FdslH-kOyMosNdJ8oYvuwOFjw__iz89bM0IxByZS3Oo",
+    "name": "Botega LP wAR/RAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "9AsRe9T7Q29HT9NRJo_aZwGzbjQ9zfJt8hL7YtHyxrk",
+    "name": "Botega LP qAR/NOKIT 25",
+    "type": "amm"
+  },
+  {
+    "id": "JowM8fdYjAMw14QwyX8CmN2iO09HpzaQpb-d9tNHPT0",
+    "name": "Botega LP wAR/DUMDUM 25",
+    "type": "amm"
+  },
+  {
+    "id": "zEcRf8tq6CpeHDw_fa6cFLShujEysWT2Zy6XUu9CYZ8",
+    "name": "Botega LP TWIRL/AODOGE 25",
+    "type": "amm"
+  },
+  {
+    "id": "G8Uff12pcgiLQxTvpLqRh-eYDoq90YZ0W0CqJj0RuKU",
+    "name": "Botega LP AO/TKTXX 25",
+    "type": "amm"
+  },
+  {
+    "id": "6Js5EVtbmbWM_KvGi84cc-J1iNhmELUGWhIZshbey74",
+    "name": "Botega LP AO/BOOST 300",
+    "type": "amm"
+  },
+  {
+    "id": "1bMh-5Nr-vtB3PH4I9n_lO95Q6RarCLlcDH97V3TO8w",
+    "name": "Botega LP HALO/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "BttyF6xLfj55RcxxwRW_0Mf3hvVuTR2_PybpthAMPX0",
+    "name": "Botega LP TST/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Oe-rQ8zQiI0SCE0Vy87luz_mDfxRD9-Go6yLlg_d3zA",
+    "name": "Botega LP wAR/BCAT 25",
+    "type": "amm"
+  },
+  {
+    "id": "O8mgmJoXJiibdXRdu8Ndze6BE5rYQ5bWW3KQuKzlRfU",
+    "name": "Botega LP BCAT/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "mx-2oRwKmgyHuEqVs8yQHnPoz_M-FAYkZm4meY3qnbg",
+    "name": "Botega LP JSL/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "WuAkqYvunUtsD8uvpsK9XtR7_5-fbnH3ATD4DJrl-Ac",
+    "name": "Botega LP DUMDUM/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "b1S4T9d2ZGM5P0FIKg2HLC4rcbrYvg5xZsRZKC4SgvE",
+    "name": "Botega LP EXP/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "26BXDOZNPRhRwc7QFymTF5IJX-mBO2E8T8PN1Yj4olg",
+    "name": "Botega LP wUSDC/AO 125",
+    "type": "amm"
+  },
+  {
+    "id": "yJB2DFpXmZxt7RBL8Bg6dImmtmVFt4FpxLbQW1etu3k",
+    "name": "Botega LP AO/AZ 25",
+    "type": "amm"
+  },
+  {
+    "id": "eKECsvAaDph0x7g8-mmrqp4skJEjBTCnykkft-HmikY",
+    "name": "Botega LP wUSDC/MINT 25",
+    "type": "amm"
+  },
+  {
+    "id": "d2g6BtSbqayYg9--iVUSDyiEE49fC_sJVHGroqk7tOc",
+    "name": "Botega LP EXP/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "5PPjq38ysU6BoYRN0XLwdZXlIa-bYfH8SOYnoUg7isU",
+    "name": "Botega LP wAR/ANON 25",
+    "type": "amm"
+  },
+  {
+    "id": "5rROGt1CAvLDPuZ1MnWaMZfeEmieN1QjiYYC7zmOWB0",
+    "name": "Botega LP EXP/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "6etPq6jNtY_lrGgtlJwMXYbU3TaMj3vy41QW6mjRkd0",
+    "name": "Botega LP EXP/AGENT 25",
+    "type": "amm"
+  },
+  {
+    "id": "u138nDaxxc3BceXh89OAt7pRWb51bMuEdDYk67svHZ0",
+    "name": "Botega LP qAR/TRUMP 25",
+    "type": "amm"
+  },
+  {
+    "id": "4-C-rMEh_C2_fDAqCEwEzPpcvDu_7YmsOMN2Rivm8-I",
+    "name": "Botega LP wAR/ARIO 75",
+    "type": "amm"
+  },
+  {
+    "id": "SKRRMo9cgL-V1gzPJa86c6Xh54ipWIxftmH60p_GvEA",
+    "name": "Botega LP AO/TKT 25",
+    "type": "amm"
+  },
+  {
+    "id": "bMyl_dysjbyKJBbaT9u9RwgTd527H3WcSvVyGugljvM",
+    "name": "Botega LP DRPT/DDP 25",
+    "type": "amm"
+  },
+  {
+    "id": "Fntcs_1CZYNck6932-D35sHXxERe7soHFEZUwqq6anQ",
+    "name": "Botega LP qAR/DUMDUM 25",
+    "type": "amm"
+  },
+  {
+    "id": "C8nhA7daxSLsvjljKRDGWLac54njWlXzvs0m2OKeE_4",
+    "name": "Botega LP AO/BCAT 75",
+    "type": "amm"
+  },
+  {
+    "id": "WjLpu62JJqXQIjXPBmCkoyWNvTJs4muOKcxdAieEmAY",
+    "name": "Botega LP MINT/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "cmZi84AA3f717pna0ck-gM93wq1j1exRdNLdt7saG9o",
+    "name": "Botega LP wAR/MINT 25",
+    "type": "amm"
+  },
+  {
+    "id": "mqtJ7Y133FDDyBA45pUFV_mJ5cfb49qn_Z2cEpfj29k",
+    "name": "Botega LP GAME/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "7lyQ5ShtM6DJ_KejWBHxbZtlVUNkpdZ1957wQHavuJM",
+    "name": "Botega LP SMONEY/AO 300",
+    "type": "amm"
+  },
+  {
+    "id": "UiEYdauYBdx9SWKnXbaXME6ZkmcszAMU3ZSC6i0GSR8",
+    "name": "Botega LP wANYONE/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "Q9uyLNaNvuFHvNrQQZ_XuOrRZ6OEE0KqSEPJJj8Z4Ys",
+    "name": "Botega LP YT1/YT2 75",
+    "type": "amm"
+  },
+  {
+    "id": "dItcG4lIVGSsi_wufAFeiWSkKCmZR25IbUuwykpQUhc",
+    "name": "Botega LP qAR/HRSE 25",
+    "type": "amm"
+  },
+  {
+    "id": "Qngdn8yLIcqqmqI4nLDoXEwCHbnNRcoLN9v4tXkaXvI",
+    "name": "Botega LP AGENT/HALO 25",
+    "type": "amm"
+  },
+  {
+    "id": "7kqquL0y4TGGjL6AJR3-nC0ZUNOK3ZT8IDeOHkRAaaY",
+    "name": "Botega LP qAR/HOG 25",
+    "type": "amm"
+  },
+  {
+    "id": "b-SCikkMXgH080uLOECwx-F2-sx6ZN2dfkbOB1rYeOA",
+    "name": "Botega LP qAR/RATTYB 25",
+    "type": "amm"
+  },
+  {
+    "id": "aHlTSg4UiAdmJ9i1LVslUuKHQOPG3wBhzIsLF9cGd8M",
+    "name": "Botega LP HRSE/RATTYB 25",
+    "type": "amm"
+  },
+  {
+    "id": "0RrzrXCKNqkiTirTiHaAjqyZQ4DFTtiqBlhAYmidzaE",
+    "name": "Botega LP HRSE/HOG 25",
+    "type": "amm"
+  },
+  {
+    "id": "43aVKPZ9ALIG5Dc646FyI4AAWCXnK9mZDCK1JhQL-tI",
+    "name": "Botega LP DUMDUM/EXP 25",
+    "type": "amm"
+  },
+  {
+    "id": "UxLqhlBkIITPypglQOOrtcTQddFJU4utYFkwDqFbV7g",
+    "name": "Botega LP wAR/MINT 25",
+    "type": "amm"
+  },
+  {
+    "id": "DMB9l4HSp-9qBvXtxDqDTnZZ3qFNCwJgivwSv0XEgN0",
+    "name": "Botega LP AO/MINT 25",
+    "type": "amm"
+  },
+  {
+    "id": "mqJsHpuJLk77PB0pVCv47KqT3U_xY_ZHQQwHvzUAsWY",
+    "name": "Botega LP AO/MINT 25",
+    "type": "amm"
+  },
+  {
+    "id": "KdIH8lNEuYEySqTYAoA_ceBuvgEKcmk6u_y8GMhBN80",
+    "name": "Botega LP AGENT/NAB 25",
+    "type": "amm"
+  },
+  {
+    "id": "FkG53NqW_qGkpEHlQgAswHgh3oXV-GzB4_p-FJ70DOM",
+    "name": "Botega LP wAR/wANS 25",
+    "type": "amm"
+  },
+  {
+    "id": "RFtwVGuyaOp5Z0tuLCSgH0ZQcFS6cVFR5NnlZTTWnY8",
+    "name": "Botega LP AGENT/ELE 25",
+    "type": "amm"
+  },
+  {
+    "id": "VC55wQCvp3o4lcnzFSEEjE0Wg7ruFFaezBhsH0eGvis",
+    "name": "Botega LP wAR/ARIO 75",
+    "type": "amm"
+  },
+  {
+    "id": "t3Dxq0oH5gPH38T3uQAek1269tTwMSSZgU6lBFvrNEs",
+    "name": "Botega LP LLAMA/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "4sua9ZsGUX1wsV1FdgKue0J84zJ2DQ1xbHdumg1iyiQ",
+    "name": "Botega LP wAR/TRUMPFAM 25",
+    "type": "amm"
+  },
+  {
+    "id": "tLfBD1vyCpxGu1O2OPuA3VuJ-IMZuTUcGKgU_I6AM7E",
+    "name": "Botega LP TRUMP/TRUNK 25",
+    "type": "amm"
+  },
+  {
+    "id": "waJOrK6dYeqsprwb6itImF_U_sFP06PXPfSAh8P0NeI",
+    "name": "Botega LP LLAMA/BCAT 25",
+    "type": "amm"
+  },
+  {
+    "id": "lTZCuKY2up9N6m0cAX0efxYo_1MRyKNmqsqYBaWpS9U",
+    "name": "Botega LP 1kAR/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "aJ37bbyH8hOrh7urFNwq5vYsAHvjDtkTqf3jUF-2NwQ",
+    "name": "Botega LP wAR/NOKIT 25",
+    "type": "amm"
+  },
+  {
+    "id": "XUihw_LEASdnf1jaLr2hLvh3wJmNRaWjvgFn6kGlx8o",
+    "name": "Botega LP FFT/UN 75",
+    "type": "amm"
+  },
+  {
+    "id": "aoIUE7ky-ciffP6t_6aBIte09-k2H-G6mxjTFMIt51U",
+    "name": "Botega LP BIRDS/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "uQ6ZBNCJVb3SdgXWtsXT85JFXoqplo6Ocq5IE76ROk4",
+    "name": "Botega LP MV01/AOB 25",
+    "type": "amm"
+  },
+  {
+    "id": "cG2uakimBR65Yk2YxPqBYfnONVosuPXD5_8j4lNa2Fs",
+    "name": "Botega LP AO/ELEPHAS 25",
+    "type": "amm"
+  },
+  {
+    "id": "QRRmJbYqbCCO0o2y7u9vBhiqONpma-EAnXadf6Zkxyw",
+    "name": "Botega LP AGENT/AO 75",
+    "type": "amm"
+  },
+  {
+    "id": "ZBim0kTcHenQqqa-LYsqYP7v5yelbEvgxpG4FAaUiaY",
+    "name": "Botega LP TKT/wAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "wVv_arTkiiWVE-0vRImkPr34u-C-8Di6Wtxry0PKZiM",
+    "name": "Botega LP SMONEY/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "Ioa8eFVDNroitDPlVKarviQTMoE9Mek7gXlyX-rPt5M",
+    "name": "Botega LP SEND/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "76IKbymu5DvaYaZcbMvEJg_WI9LNzZgzv3vcFmgES2M",
+    "name": "Botega LP YT2/YT3 25",
+    "type": "amm"
+  },
+  {
+    "id": "gJiY9XYhDkI-lrGwmRD85XDJLh2bgQDpSQ-G64GMrZ8",
+    "name": "Botega LP wAR/tEXP 25",
+    "type": "amm"
+  },
+  {
+    "id": "eL1DtzYiy-Feq0nqa3WY0BUgJUy7NOgKBpJ3KfKn5fA",
+    "name": "Botega LP TKT6/TKT7 25",
+    "type": "amm"
+  },
+  {
+    "id": "3GYFWSSiqLBkONTddwqw6Edfgl-ZdTarJlSIwPwj6Bc",
+    "name": "Botega LP wUSDC/tARIO 25",
+    "type": "amm"
+  },
+  {
+    "id": "8XhvJZhVljxvLX2px2tyX94lieZ0maPTEuZjfq1DPdc",
+    "name": "Botega LP EXP/BCAT 25",
+    "type": "amm"
+  },
+  {
+    "id": "geCORx-2C1Prnuvfpn-iuegyYaG-rI7taBI7GrOQicw",
+    "name": "Botega LP AITRUMP/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "sXvC-SIRNZ5VuuYffbkRhuRzzoD9E0A_mIxMV_KqWS8",
+    "name": "Botega LP BCAT/RYB null",
+    "type": "amm"
+  },
+  {
+    "id": "JkN_xrwtnNAaz3bk3XHVG2Dws5tXXT2cIZ49X0lRi1c",
+    "name": "Botega LP NAB/DUMDUM 25",
+    "type": "amm"
+  },
+  {
+    "id": "uay9sRihdYZOQxX9_tv7-ac4RDKHowZhBg2zscniQqo",
+    "name": "Botega LP NAB/BCAT 25",
+    "type": "amm"
+  },
+  {
+    "id": "lwjEiao452i-SF_Z2rFxDJ-Hf9NXaBtO2P0pJnTK5TQ",
+    "name": "Botega LP wAR/LAZY 25",
+    "type": "amm"
+  },
+  {
+    "id": "Ahanqp8SNnH3fmQL9zWHBWEIA9ALqsFVNfP0J_1fNjw",
+    "name": "Botega LP wAR/TRUMP 25",
+    "type": "amm"
+  },
+  {
+    "id": "2fG2_DZWLmEeAzWilPMgIXx9Zpho0kubDnBuLocxsRQ",
+    "name": "Botega LP NAB/wUSDC 75",
+    "type": "amm"
+  },
+  {
+    "id": "HuyireMveI5efFuMS7Bq4ZLJoo1Cp5Mp20bLALnuJKo",
+    "name": "Botega LP AO/SEND 25",
+    "type": "amm"
+  },
+  {
+    "id": "sDLmAWhX3FZej73SQtXzOr0FdIsF7RYis7smXkq_9qU",
+    "name": "Botega LP AO/TKT 25",
+    "type": "amm"
+  },
+  {
+    "id": "dfihCE6Ml8UsCz6UkghyE51Y6zf5-WVRWq1eHJDUmV0",
+    "name": "Botega LP GAME/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "sXrE9euzt4Tecr-4o4D2EJAZnqg5e3wc6Zs2DdMAO7c",
+    "name": "Botega LP TKT/wAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "BHxdWnUKGlSjSOe5M6gDja4zUokHLaqoH7ykWS2y_aA",
+    "name": "Botega LP qAR/MICHI 25",
+    "type": "amm"
+  },
+  {
+    "id": "QBXaaIbJRstLuAa8RSpsLEpuoMEaPn2dDlinygIyLB4",
+    "name": "Botega LP wAR/OPERATOR 25",
+    "type": "amm"
+  },
+  {
+    "id": "XIFN3wtfUAGggtTC4zMU3Fe14gKH5qmMoBAUYht0jX4",
+    "name": "Botega LP wAR/BOOST 75",
+    "type": "amm"
+  },
+  {
+    "id": "JNUjiiqjW__2S_lMC-6-yNAopTmtCyb_dQ2XcKXgYbI",
+    "name": "Botega LP AO/TKT 125",
+    "type": "amm"
+  },
+  {
+    "id": "U5H5DzyKOAQ08Pgr5phBXNKRmjXqAiKj87je115xBTc",
+    "name": "Botega LP AO/TKT 300",
+    "type": "amm"
+  },
+  {
+    "id": "pfZpmMbXyh6EUC5wEdAREmZ16uzBvjkE-tzTQbFizI8",
+    "name": "Botega LP TKT/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "Zz_lYNe4_egM69eDvwBEURDmIiyYJd93dD3dxkN3V8Y",
+    "name": "Botega LP PNTS/PNTS 25",
+    "type": "amm"
+  },
+  {
+    "id": "8lULl_gzuz212bWsMKMu6TavDLMDmAAtzPp90jmh4P8",
+    "name": "Botega LP PERMA/XYXZZ 25",
+    "type": "amm"
+  },
+  {
+    "id": "R7PgfGuW241wiUPa6ZVngAz8eQ4QWJI-GQD-4jwJmPk",
+    "name": "Botega LP wAR/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "cM161FtOkq1elIe6QvdP93RoN7NYKUjyWbm4HBeJgMw",
+    "name": "Botega LP MONKS/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Z2y50NZ-DjIzQnjTDv-tlqPj9hCQW881S5kNy3nCzWk",
+    "name": "Botega LP SEND/AO 75",
+    "type": "amm"
+  },
+  {
+    "id": "H1jr9GvWghCSdTTNX-Xs2Dfi3R6Q9d5UEwumkNK_Go0",
+    "name": "Botega LP AO/TKTXX 300",
+    "type": "amm"
+  },
+  {
+    "id": "cZW1TCR0qtfrOSPStk5wTaoiB6gTzbcJQF8PSuBIwm4",
+    "name": "Botega LP AO/TKTXX 125",
+    "type": "amm"
+  },
+  {
+    "id": "w5UW-qIme4BWojTRQBqFRsweuzWzA-Hy9KExmJM5DMg",
+    "name": "Botega LP YT1/YT3 25",
+    "type": "amm"
+  },
+  {
+    "id": "DzQ0ntwWzWRk-jYVxSSxQd-BVZ2cQgR1SMaS9mnMK5s",
+    "name": "Botega LP TOILET/AODOGE 25",
+    "type": "amm"
+  },
+  {
+    "id": "aDeXXVoY5bYWk2k5SFK9bSIxDFw1M9d2ac2vRZEnW7s",
+    "name": "Botega LP ARIO/AO 125",
+    "type": "amm"
+  },
+  {
+    "id": "BGhaOrAQrel9KnzOMp82iWSJ49bKzTjUt65DyJvePk8",
+    "name": "Botega LP PNTS/ST2 25",
+    "type": "amm"
+  },
+  {
+    "id": "M14d90SwY1pLZk8zq4OJxb5gFW-iaSMVNxZX2Lr02eI",
+    "name": "Botega LP ST2/UN 25",
+    "type": "amm"
+  },
+  {
+    "id": "qcdYZTJZHsn5JnwjOXLzO3P7HfXMHvpH_qsvcipGNkQ",
+    "name": "Botega LP wAR/RYB null",
+    "type": "amm"
+  },
+  {
+    "id": "-XJfuETKr74ehh1GyZehkCzar9cSULETm8apCvLoAOU",
+    "name": "Botega LP wAR/BOOST 75",
+    "type": "amm"
+  },
+  {
+    "id": "WMDAS97E57qXWSyZ8kpRYKH_iibiw0RcbX-IrVkE9dM",
+    "name": "Botega LP B3TOKEN/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "ciXarE4hh0suXPwpkGmNYh33AUhm88rfz_2guhK6SeM",
+    "name": "Botega LP NAB/wUSDC 75",
+    "type": "amm"
+  },
+  {
+    "id": "LMMyJcy0gg9w3CvBexMNd1zfAtHYFYZoixsm1hRYMQE",
+    "name": "Botega LP SEND/NAB 300",
+    "type": "amm"
+  },
+  {
+    "id": "S5iWl7L76dBpvrm-i_SRWODchdLYBGwYeSrIxC8v-vI",
+    "name": "Botega LP ARIO/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "8sCebZHN8C5eheRWF243TFCF84OLqGWBYP8PdKf8NK8",
+    "name": "Botega LP AO/ARIO 25",
+    "type": "amm"
+  },
+  {
+    "id": "Q9mnzqVuiEsCPcR_NrmqHnK5Foz4DnCFcVsB9nHh9yk",
+    "name": "Botega LP ARIO/qAR 125",
+    "type": "amm"
+  },
+  {
+    "id": "VGqIZAMC6etpB8M_YDKL2wyCdUTEIY3dkJcfkwjI8RM",
+    "name": "Botega LP wAR/ARIO 300",
+    "type": "amm"
+  },
+  {
+    "id": "1gv__tYVymq5HpwvgSMUAHXtnxm6tiqgMisYp2-d4YA",
+    "name": "Botega LP MRTT/NAB 25",
+    "type": "amm"
+  },
+  {
+    "id": "rASh3F_II9K9srEE2dme11jGeTxyHiV7B7mx7CSaHX8",
+    "name": "Botega LP qAR/TKK 25",
+    "type": "amm"
+  },
+  {
+    "id": "rtDyHTj7aQvhLapDjiCLZIgUQVKgPlKm1_Civ7YYjVI",
+    "name": "Botega LP BLAH/wAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "xEJT833UXe3RnCM8NL1ov_bLSYbK1fxzsIauiiHFkNI",
+    "name": "Botega LP BLAH/wAR 300",
+    "type": "amm"
+  },
+  {
+    "id": "DhiYsqOtkd42rSlVyNOyJ8Clxv6HmFbIfi0fSz_PRik",
+    "name": "Botega LP qAR/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "xxwJCl8eh5FaUMZRCdAiaVP-KB_92RsouVIBsltpI6s",
+    "name": "Botega LP MAR/MAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "GDwK5yJSSglzrjIe3aIXhSLK4UUzgITeDv-e_iBqh9Y",
+    "name": "Botega LP TKT/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "aZtqKNPH7aZzB2Wu5yxe-oZz_sVKJ7HJwmayfKxIDOw",
+    "name": "Botega LP USDA-TST/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "oeDBkdZJpbSvc8AO7z5KfqBqFj1ULOMkcXyHY-MlYAc",
+    "name": "Botega LP wAR/DUM 25",
+    "type": "amm"
+  },
+  {
+    "id": "X4Bxg0tOex4MokUGmXN0na2RemJ_p7AShZyqTJV1glA",
+    "name": "Botega LP TKT/MAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "Uy7d7N6s08xE8zpBpkwNQ6Iay9I5-mZvVnTYwlB-548",
+    "name": "Botega LP qAR/JOOSE 25",
+    "type": "amm"
+  },
+  {
+    "id": "HmOAy8P5qKy5PlD3zlxYCW6RWE1spYPpCi0X9ZLARcI",
+    "name": "Botega LP TKT/TKT 25",
+    "type": "amm"
+  },
+  {
+    "id": "bOa5Szy9HbHaNPSrYirfHJzfIU2-Jzx9M_sHJL3BZew",
+    "name": "Botega LP FPT/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "ZcQ4A-9mmK0VEHvDH9Y_45SPlyFAcnZ0noKgsHdQSLo",
+    "name": "Botega LP CATWEAVE/RYB null",
+    "type": "amm"
+  },
+  {
+    "id": "T1hLoGQd82N1Npij8jwad4buDBCN-qF6_jE85ajMtBY",
+    "name": "Botega LP GBP/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "Ez4wPgeqcFyqmmF9UAaI-y9gzDuUwjZ0Vt1Y_DixFDQ",
+    "name": "Botega LP wAR/owAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "1Xw4ndvB9CPxeox658T75Slb2O4vpOhOuQVd_swnQkE",
+    "name": "Botega LP wAR/owAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "QyYyVEY5bdWU9s_Ms_Kk_IxIOnlLM6c-dAhL-BVq78Y",
+    "name": "Botega LP GBP/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "UmnJgkxvPmHna8FUl3-EW5_7vPH2TPJCtGItTYPjhF0",
+    "name": "Botega LP wAR/GBP 25",
+    "type": "amm"
+  },
+  {
+    "id": "rG-b4gQwhfjnbmYhrnvCMDPuXguqmAmYwHZf4y24WYs",
+    "name": "Botega LP GAME/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "5vrYhHQVL60Ll-DTB2gc4lwZoYUypk_FE-lDpXVprF4",
+    "name": "Botega LP NAB/MINT 75",
+    "type": "amm"
+  },
+  {
+    "id": "wJerY4pm09KrMm18kO6fSzHJE4cOm6-hUZb_QBadxSA",
+    "name": "Botega LP MINT/GAME 25",
+    "type": "amm"
+  },
+  {
+    "id": "_AuOLZbC7maD41nCdX1i8ZEzgiVCqG6bCWyL7RcVWME",
+    "name": "Botega LP qAR/DOGE 25",
+    "type": "amm"
+  },
+  {
+    "id": "2EshW1ysBFoiuN3n3HjkmTghZ5_MRktPmsDXZlPuoRI",
+    "name": "Botega LP DDT/DTR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Eh2Sxp8-8LgBgrsC7QfKn9mlyjt28veIZ1iPxs8iANg",
+    "name": "Botega LP CVB/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "BNcegnV3HwDQ1oqXdBZ1xAIlOrykXaPPZ_Li_623yaM",
+    "name": "Botega LP TTT/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "3rfChWnS2BAdyFaZAdfyiAmylD5fiynVA2-ugnGNBkg",
+    "name": "Botega LP DUMPET/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "t4aLLFC6Ms635bOY_xiCbDbiC4shDqeXjp45OHBJoIM",
+    "name": "Botega LP RYB/ARY 25",
+    "type": "amm"
+  },
+  {
+    "id": "NX9PKbLVIyka3KPZghnEekw9FB2dfzbzVabpY-ZN1Dg",
+    "name": "Botega LP qAR/NAB 25",
+    "type": "amm"
+  },
+  {
+    "id": "qqFYnuevUj7FrWYU2OEM8zmxWUcG_yCdK5NyddDpMAg",
+    "name": "Botega LP ALAON/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "56W8KtDS-EHcdmJr2LZfud7AI-ecqX87mmYoNxg3uz8",
+    "name": "Botega LP MOC/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Fsf8SFd7APT3sRQqI5mfKFh0QjaIis26ZvVuvzMQEH8",
+    "name": "Botega LP AO/ARIO 75",
+    "type": "amm"
+  },
+  {
+    "id": "nvBNs4-46zlAehjkFqSQ2Tk7E4ys7dXpAEr8kqsySbc",
+    "name": "Botega LP BUNKER/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "X-IjsHfiTYtJSajp6lOByPsehIo_kjNluR7evM30Nrs",
+    "name": "Botega LP BLAH/wAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "I9j3syzwqBuFkORLj9TT2GzSLkRWE_RgYkJt7vhkui0",
+    "name": "Botega LP LKF/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "0Zgggcvri_G4C1U4AsTla1OoxW7Dp6-Qezps407VBfk",
+    "name": "Botega LP JHG/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "AaEXDrLjlYTfM8jaFtHQNuboh98Fz9YkO1OCIrBFBrE",
+    "name": "Botega LP EWV/RYB 25",
+    "type": "amm"
+  },
+  {
+    "id": "WTgKCmo-ERjTyym5-4g_IVJMOrktcZZZullylT2KR3U",
+    "name": "Botega LP EWV/ARY 25",
+    "type": "amm"
+  },
+  {
+    "id": "RoevgCpsRyjBuQLkXkSZpziwvieIqAirGOuUNbCZ1kQ",
+    "name": "Botega LP wAR/TKT 25",
+    "type": "amm"
+  },
+  {
+    "id": "MiFZ25YrRhECseEJDhQJbqMl_WCmzx9cKBsEQoR7ClA",
+    "name": "Botega LP qAR/ELE 25",
+    "type": "amm"
+  },
+  {
+    "id": "bcEDInEmT3hGZAsnvmvqNVm4rHdXntz-50YX0Ctt0KI",
+    "name": "Botega LP wAR/ELE 25",
+    "type": "amm"
+  },
+  {
+    "id": "ZauxZTSokiZ5BjiOxKlbV5uv0l02ixm_-hD16FeVOBg",
+    "name": "Botega LP PAR/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "rrkUxaXBDORW4ptdLcJyARcxAY0jhPITxOjZgYG356Q",
+    "name": "Botega LP wAR/PEACE 25",
+    "type": "amm"
+  },
+  {
+    "id": "AaijM5dtqNzldluY8gKk7O4zdp5UPv3u0cUEowga5ZI",
+    "name": "Botega LP AGENT/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "t8ewMNbdNlAhiOja3Ckep76SzLS7aPGK3L5CCCz7360",
+    "name": "Botega LP DAFD/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "glE2s3yDgkA-YTIUiXOos-A-zDSkz_3ybZAybWLt53E",
+    "name": "Botega LP AGENT/BCAT 25",
+    "type": "amm"
+  },
+  {
+    "id": "uu0rJByQpo-VT0myCLhMQPp3GjhbRwMAv8fdehGsN1k",
+    "name": "Botega LP FT2/FT1 25",
+    "type": "amm"
+  },
+  {
+    "id": "wAxZpk1ZHezVlvm7xvYm4dDzI5DwSaaAaLPhHFxdr8w",
+    "name": "Botega LP qAR/MOODENG 25",
+    "type": "amm"
+  },
+  {
+    "id": "-mtQOtKcmDs5aWc6Kp8EirHVHLimlcNpPchGbOGmE3Q",
+    "name": "Botega LP UN/PNTS 25",
+    "type": "amm"
+  },
+  {
+    "id": "XHiV67PHKkBPYju1vl8X3soWVmrRb5TCZNxUF62b3nE",
+    "name": "Botega LP GOAT/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Lt0PKHQCFxXkXjJVd5CV2tRIlXe55hs4cQ8_OY9JgsI",
+    "name": "Botega LP MINT/NAB null",
+    "type": "amm"
+  },
+  {
+    "id": "EJX9HmxurbeXUCaoTTo38P0Wbc5mNrLNrfW3cSg_3rM",
+    "name": "Botega LP wAR/LLAMA 25",
+    "type": "amm"
+  },
+  {
+    "id": "qV6mKrqEgMg-Lpr8VZAkcwWMUDJb6G0ANWcBf_2HtUU",
+    "name": "Botega LP qAR/FTX 25",
+    "type": "amm"
+  },
+  {
+    "id": "zxNI1XYPCjKTfFZ-kIMW_9pEGlleFf_FRZhRJBtvibk",
+    "name": "Botega LP AO/ARIO 300",
+    "type": "amm"
+  },
+  {
+    "id": "20cEmow3vtkcmGbqgDIq7J9iLJB46_ku_LUoLvQT3uY",
+    "name": "Botega LP WYOG/AODOGE 25",
+    "type": "amm"
+  },
+  {
+    "id": "C2wN-uUmTsyyKMc5qopJxS3-mlbGcH8G3BJIlFgHL78",
+    "name": "Botega LP AO/BULL 25",
+    "type": "amm"
+  },
+  {
+    "id": "BBiwIhEU9vxmSvtY0KkX5WTMudUcAS3-WKxAqIwoTKA",
+    "name": "Botega LP wAR/HOOD 25",
+    "type": "amm"
+  },
+  {
+    "id": "oudDA-JUZi14kbKFIhu4X34qGYHbtZnHdtYWEqbtkO0",
+    "name": "Botega LP wUSDC/MINT 25",
+    "type": "amm"
+  },
+  {
+    "id": "TH9KkYJzjemJOdQy38I0eTdhE9EPXuLMn8enqWOFyzQ",
+    "name": "Botega LP BEANS/AOB 25",
+    "type": "amm"
+  },
+  {
+    "id": "ai47aFWWFnaM0isMFIIYlUZnk-uO7b4oyIvkqR8mcag",
+    "name": "Botega LP TEST/MPT 25",
+    "type": "amm"
+  },
+  {
+    "id": "OuyYisy9BguYvrmFG-_kOsh7Zq4fw4RUGTZ0Z3X8FhA",
+    "name": "Botega LP wAR/TRUNK 25",
+    "type": "amm"
+  },
+  {
+    "id": "sCuP9nTQ8i1zWwl62z6bVnSpdzTyNnp3xVKqyGKX1rY",
+    "name": "Botega LP wAR/DATA 25",
+    "type": "amm"
+  },
+  {
+    "id": "xrtZSjeU7-_pMJB6ytNmHcGq27xavxAOzfmym0mtdXI",
+    "name": "Botega LP wAR/NK 25",
+    "type": "amm"
+  },
+  {
+    "id": "-2O4bEiwnJu7MOpksKGlNvFAjH6XagtHfOo8d4ZRjaI",
+    "name": "Botega LP MCOL/MUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "0yR7PW8sCb_SuOgf0s8t1xX0-X2pqLnm6fEF776jvgo",
+    "name": "Botega LP wAR/ARIO 125",
+    "type": "amm"
+  },
+  {
+    "id": "O0WPt9S6HQXYQLdRty9q62VhzlTw9E-eBl48O8BKoXs",
+    "name": "Botega LP wAR/MATRIX 25",
+    "type": "amm"
+  },
+  {
+    "id": "jo-1m8OUQT2GwjGPlZnWT6briVJitsTZF95M-FbjmZE",
+    "name": "Botega LP qAR/AO 125",
+    "type": "amm"
+  },
+  {
+    "id": "wGdMsMmqGVC4bN7gIsUiKG2Of0V6WctRhUQyz_i8UBE",
+    "name": "Botega LP TEST/MPT 25",
+    "type": "amm"
+  },
+  {
+    "id": "Ov64swLY1JfXK5nMFO-mc_Kb_s8vA6w2KDcjpho9BRU",
+    "name": "Botega LP TRD/DDP 25",
+    "type": "amm"
+  },
+  {
+    "id": "G3GIcOVaKYh1Gr95SHRSajvG7-PZhWrm5F1gRldH-PM",
+    "name": "Botega LP wAR/AOZE 25",
+    "type": "amm"
+  },
+  {
+    "id": "vRuuTs9rqN3Wk6U7wyBlBJYq_MlBH94L1rCYPX2Oe0w",
+    "name": "Botega LP FFT/PNTS 25",
+    "type": "amm"
+  },
+  {
+    "id": "caLDjssasuUw389rjc-kJGsU-bEFgnGTBBTJoFRNBvM",
+    "name": "Botega LP DUMDUM/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "6dqYN-lE6E2w3c4TOjaTjiXMiXK6FJwGRp6jP4DqprU",
+    "name": "Botega LP MEMEA/DNE 25",
+    "type": "amm"
+  },
+  {
+    "id": "LwVHULR9Xxr9-y0bjLPGYDvvsKQAlRPlXuFNWYhoSSI",
+    "name": "Botega LP BLAH/wAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "zYzUzy0ooaHj4eeFkBa3WdQE2CR7-nJ3WQteUnm6wMA",
+    "name": "Botega LP NAB/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "-Y43fXWysQS7r_eiz9T_xT4npzdFRmycs9VWtar2CXY",
+    "name": "Botega LP DUMDUM/AO 125",
+    "type": "amm"
+  },
+  {
+    "id": "1Oz__qGSvdRx1kINc3G_BwEB2GzlG0rC0Yxe23Z-N-M",
+    "name": "Botega LP DUMDUM/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "cfJIBVw4ojWnjiQJ1Z6CRU56YnYJPZpaMgAIs-BSi68",
+    "name": "Botega LP wAR/AO 75",
+    "type": "amm"
+  },
+  {
+    "id": "Aiqyy9wgpVnnd96rdCRzL-5La568Rr9cvRrd1Rcdar8",
+    "name": "Botega LP DUMDUM/qAR 300",
+    "type": "amm"
+  },
+  {
+    "id": "3biQvRjIp_9Qz1L9D3SJ9laK4akCkP-8bvAo3pQ6jVI",
+    "name": "Botega LP AO/qAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "7sUFikrorGKlYyiy3XRoiRB6dc7f_3v_fkT2fbjocHE",
+    "name": "Botega LP wAR/VCAT 25",
+    "type": "amm"
+  },
+  {
+    "id": "usMlh8eWf9wrLR9kSPosW--SrXJGZ40LC5Rekjgywy4",
+    "name": "Botega LP PIXL/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "cvL60xZdbvSpB7PVwX2K_P46loDvzDa7bjzjxlc3elo",
+    "name": "Botega LP qAR/GOAT 25",
+    "type": "amm"
+  },
+  {
+    "id": "f90WPMT7E3ncJQYpyAUetV57weHG0ZPaK9Kp1uzIsbg",
+    "name": "Botega LP FFT/qAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "wTIpisZKMtG5WsLFqQBdoJEObyyeoJQmwWFm1h462D4",
+    "name": "Botega LP AO/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "NdeAIh-lymKjmg3TxDlvO2sroE-osq-Qumjgam8-XEE",
+    "name": "Botega LP AO/wAR 300",
+    "type": "amm"
+  },
+  {
+    "id": "_oWsi2p31w7iONYxBu1RInkNNK9ZSxlwVLdpEqE6s0s",
+    "name": "Botega LP TEST/MPT 25",
+    "type": "amm"
+  },
+  {
+    "id": "KwYRym6Oku73keCTMrMUFxXRPuDTsv_NFPsvzUJdtH0",
+    "name": "Botega LP TEST/MPT 25",
+    "type": "amm"
+  },
+  {
+    "id": "1YJJ6X1vjgdyDs1ANzJoZ6w5pArf-sBTFC7v5vuOpYU",
+    "name": "Botega LP TEST/MPT 25",
+    "type": "amm"
+  },
+  {
+    "id": "NgtjHNjEutLRm9MHRzRpGJj6K2aLp8wiUHeNZP-tSG8",
+    "name": "Botega LP qAR/wAR 125",
+    "type": "amm"
+  },
+  {
+    "id": "ZwzB73pKu1lQWdfBsBwjozxTyjacLF4fh_gLsAGcUfk",
+    "name": "Botega LP B3TOKEN/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "EFGxspbF5cZEtsuXRZT1BSisOJfpYN9G0bIsDC5lyDI",
+    "name": "Botega LP wAR/PIXL 25",
+    "type": "amm"
+  },
+  {
+    "id": "5uwK4BEfcTy9h7jJQfAx4jlrJB827ANJbNIxHWGSNTU",
+    "name": "Botega LP TKT/TKT6 25",
+    "type": "amm"
+  },
+  {
+    "id": "gnoqFV39NfY2WOt2dHMw0xfyuVl4KlgTiJcuqN0y7d4",
+    "name": "Botega LP AGENT/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "hPmmc-3A4Ba0K6AiUUBH5Bo0hfAN4g8EJa9asRx06R0",
+    "name": "Botega LP AO/AGENT 25",
+    "type": "amm"
+  },
+  {
+    "id": "B6qAwHi2OjZmyFCEU8hV6FZDSHbAOz8r0yy-fBbuTus",
+    "name": "Botega LP wAR/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "8DdYrPbX0XM_3HuOqZN5zMphGFMSDG1pTMkWPyYJ_5k",
+    "name": "Botega LP AO/qAR 300",
+    "type": "amm"
+  },
+  {
+    "id": "BXFtqlx_JUFOSFJmXyRfSjdvudI0m8HS3n5h9vPlWM0",
+    "name": "Botega LP tARIO/FT2 25",
+    "type": "amm"
+  },
+  {
+    "id": "TYqlQ2vqkF0H6nC0mCgGe6G12pqq9DsSXpvtHYc6_xY",
+    "name": "Botega LP wUSDC/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "CVdwG8uAYwqaU4NoibM6grcbqv9rC4ffeifcEzBXoXE",
+    "name": "Botega LP wUSDC/RYB 25",
+    "type": "amm"
+  },
+  {
+    "id": "vXGyFFsm5nug7L2pftopsvBW17f_BZoiNsTlecHjTKs",
+    "name": "Botega LP AZ/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Qm56nsWNDDssFW_8VS533ukuBAhmIVSR4A-9XQ1AMks",
+    "name": "Botega LP HUEL/EXP 25",
+    "type": "amm"
+  },
+  {
+    "id": "19XoP5GdBe3FhfQdmfVaL59BJJG5gotCuSkkrlkQ9po",
+    "name": "Botega LP MATRIX/MPT 25",
+    "type": "amm"
+  },
+  {
+    "id": "57Taac-A-vry2l-_6iSNv268m6b9uTcxirUZgo2UIQ0",
+    "name": "Botega LP MCOFFES1/AOB 25",
+    "type": "amm"
+  },
+  {
+    "id": "0h-5sRnIYjk4Xiyv6OoCxgVs2GNo2H4kN_mSAhfrpxM",
+    "name": "Botega LP wUSDC/EXP 25",
+    "type": "amm"
+  },
+  {
+    "id": "N_JfhIr5Bwz6VTnbL0quOIzn4tgw3P-zxMo0jt6Mk1g",
+    "name": "Botega LP wAR/AGENT 25",
+    "type": "amm"
+  },
+  {
+    "id": "wmRXi2tLDJ5da_nszdPj6b8SeS7P0Z4pbq9nDg18rPI",
+    "name": "Botega LP UPS/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "PL-Ww9g3Pe0tW-Ozb9xclcwDCebDNT9MXFqLpkSTKlc",
+    "name": "Botega LP KJG/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "zdEJQ8FLgwzzOXfZqO27A3Evf0gARZzcdtRrPk2z5RE",
+    "name": "Botega LP DUM/LLAMA 25",
+    "type": "amm"
+  },
+  {
+    "id": "wDfCERaauacZovKJ6HjJ6F3T1LXl3w50nL410hXKz7M",
+    "name": "Botega LP GLX/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "lZv6UHZd1WsNK3jL5rSGcFiHzltpQPUVg9n5eMeJWP0",
+    "name": "Botega LP wAR/MAD 25",
+    "type": "amm"
+  },
+  {
+    "id": "jrHt5iZL8qbrcwpdryLs37sYrIdg-CseI3hYrWs1f-s",
+    "name": "Botega LP DUMPET/RYB 25",
+    "type": "amm"
+  },
+  {
+    "id": "VcjUdMrJnCi9ZcBKVC0hK_0H--4ERnMyhQGYGp9fJt4",
+    "name": "Botega LP owUSDC/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "T9EBzA9-sQz_Xymfkv6XYM18NOLaMeEYHS-51FKzL7E",
+    "name": "Botega LP DTS/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "m8SixEouACAvoOiZJ4DrqkM1jhay2c8XX0WR7FhFUy0",
+    "name": "Botega LP RYB/GLX 25",
+    "type": "amm"
+  },
+  {
+    "id": "wL7LhayZHdjV8Cc-k-13zPGW50fobSo7r1xvH_gLytY",
+    "name": "Botega LP qAR/oqAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "ukE6dU8O_RR9zNIfWaxbhP16VDYKibD2eGpJbDjoAA8",
+    "name": "Botega LP wAR/TAOT 25",
+    "type": "amm"
+  },
+  {
+    "id": "lmaw9BhyycEIyxWhr0kF_tTcfoSoduDX8fChpHn2eQM",
+    "name": "Botega LP qAR/AGENT 25",
+    "type": "amm"
+  },
+  {
+    "id": "BeowMvoHuSHbDllewXW6P3QecJDa_059rxqMXQHD3ts",
+    "name": "Botega LP TRUNK/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "26-Lp6__tyesAeROgddjbKeE5lXhyRqbuvhpKM--dWs",
+    "name": "Botega LP wAR/MU 25",
+    "type": "amm"
+  },
+  {
+    "id": "pfRs0r3yAXR4Q9SuVMHjJadxyP9GseDRb_mkqCcIyBo",
+    "name": "Botega LP MPT2/MATRIX 25",
+    "type": "amm"
+  },
+  {
+    "id": "K2xZ_BL07PYoJ_vvgduMkUXrHJMvJ8w-BNK1zx7CSAc",
+    "name": "Botega LP FT2/tARIO 25",
+    "type": "amm"
+  },
+  {
+    "id": "Yu0lyyLnVX1Mxm-KMvvzjob-DW2g0dxho8kwM-0Tc54",
+    "name": "Botega LP HTT/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "GeJXIQRNaSHE8hN2XzT8tmv4sMH6jCxY8EY0WwM33lg",
+    "name": "Botega LP RYB/MOODENG 25",
+    "type": "amm"
+  },
+  {
+    "id": "PyUm93_h46JkCNb7Rgx4SCkRXe1WGZsWwrNtO6Yok-U",
+    "name": "Botega LP RYB/DUM 25",
+    "type": "amm"
+  },
+  {
+    "id": "k6_Gz94ZJoIowC-REQeiP5NXVafaH77pNJxui4_d9o0",
+    "name": "Botega LP RYB/CATWEAVE 25",
+    "type": "amm"
+  },
+  {
+    "id": "4IGzddk67tIZ9zS6AEGO4DA_hq5-LONepeWd3xqt5sM",
+    "name": "Botega LP wAR/dIO 25",
+    "type": "amm"
+  },
+  {
+    "id": "pjSK_y-czOlCg1cpxlhoaCJRiFypMyb3KGnefIPqylk",
+    "name": "Botega LP PNTS/TTYES 25",
+    "type": "amm"
+  },
+  {
+    "id": "huO1rEzyF3nPV7VyfFz7cHfvXamtbb7A98V34mJ_IJw",
+    "name": "Botega LP wAR/EXH 25",
+    "type": "amm"
+  },
+  {
+    "id": "mMUl4kDwoMHtFcVzpVQHPHJ9ypy8O9ttKYUEoCUBdrg",
+    "name": "Botega LP wAR/SBT 25",
+    "type": "amm"
+  },
+  {
+    "id": "uqk91fL2tOmMI_XYzE2cuk4bmE62gyWu_MNr-25L5Lk",
+    "name": "Botega LP wAR/CHARLIE 25",
+    "type": "amm"
+  },
+  {
+    "id": "28col0v_59eZwr2iWDZz0yGwGgr8V8sj-2CI455emXo",
+    "name": "Botega LP TTT/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "ZJ_Zz1jD-5Fn-5PGom4UHZWFLOgm_J-kxRBtNI_7dQQ",
+    "name": "Botega LP wUSDC/owUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "VUtLcz7fPpu_Gs3IDIeJYeKrz5T3aISGSvnBz82ZEgI",
+    "name": "Botega LP TRG/TUSDA 25",
+    "type": "amm"
+  },
+  {
+    "id": "SnNaD0ke3Dk8pSN-MkO0mtc66DqsAtCYHtniu0x070I",
+    "name": "Botega LP MAO/lll 25",
+    "type": "amm"
+  },
+  {
+    "id": "PQuCL3DpY1YxtIJxM1n_Prgwg3n4QqqAx00y8V3sk0g",
+    "name": "Botega LP wAR/ARDINO 25",
+    "type": "amm"
+  },
+  {
+    "id": "sC97cLJR5lpQNegTnTKBMR5yRLGtT-CKpLP_tjl4yDo",
+    "name": "Botega LP qAR/wAR 300",
+    "type": "amm"
+  },
+  {
+    "id": "ZV_FQiQ69XFAWTGesFmhiSEcD7EuZWVQ4WZjdAhgM0E",
+    "name": "Botega LP CALL/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "rFyagQAo0gzmopeWicjepUs3giawB_qou9A1Ys7JKIc",
+    "name": "Botega LP MAR/TKT 25",
+    "type": "amm"
+  },
+  {
+    "id": "zKNCEqN2eQOTLKeeutnsCS1-o_LqxxGLH0-diB2TMRU",
+    "name": "Botega LP ANT/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Ky8sV4_Qae3fSLzFcJsg6ND8Keuu8tdsj6qYUYywfQs",
+    "name": "Botega LP wAR/SUAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "Z1GxO3y6QdIwlGGIO0ai6v50A5vy1BXVT5zdrZWsEyk",
+    "name": "Botega LP DOGE2/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "QZGGu7NQ9eJs-Iy4LuW6J7rTFM53J8CFh6ibe7K44S8",
+    "name": "Botega LP wAR/DOA 25",
+    "type": "amm"
+  },
+  {
+    "id": "lCHuxmDwoDGQFBY4Zo3n8XOKSzZzy8PAtnfNAPEDRd8",
+    "name": "Botega LP NAB/DOA 25",
+    "type": "amm"
+  },
+  {
+    "id": "SjVwMy04UkkA0Yv-l5hI5De0N7pMRvS_tGtyyOqNNzc",
+    "name": "Botega LP MKR/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "YWXxV1MPM3wYwziC9iuZIcR82UhSNxTgZbgykOUsvSo",
+    "name": "Botega LP STAR/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "ZeSJHyEbZqA3D3h5vMnFPZi3BY4LdgXxL_lZzIUcvPw",
+    "name": "Botega LP qAR/BELE 25",
+    "type": "amm"
+  },
+  {
+    "id": "4MYqWdc4_TcvVU0zoNMzuIZkUnazrSf0d-FsVjEPtSU",
+    "name": "Botega LP wAR/BELE 25",
+    "type": "amm"
+  },
+  {
+    "id": "uI_tip34vI5UwwDPXrBO17rDGRGFMPpfMYbqb3MY6wI",
+    "name": "Botega LP TRUNK/CATS 25",
+    "type": "amm"
+  },
+  {
+    "id": "a4NEV4lfPM45ObWeiTY7tjzzJTTWGUrcBet_qFjMI7A",
+    "name": "Botega LP wAR/BAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "jdTAf0WNxRqOxTT9iUvaQSvCONo2VDmuaIdMTWyg-jY",
+    "name": "Botega LP wAR/ARIO 25",
+    "type": "amm"
+  },
+  {
+    "id": "efWubq-YJ34ErYyslccr_MbWT-CdeDQVOwI6AoUpvAI",
+    "name": "Botega LP RIDE/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "HOJpKZTM8N1xDq3ScCswpiTz2ixOG2B7UGUS57xnYTQ",
+    "name": "Botega LP NAB/AO 125",
+    "type": "amm"
+  },
+  {
+    "id": "QQpoLDH-iymHGH8ypS4eyMeG1_E_mIGcyTK_uh5oY9I",
+    "name": "Botega LP FFP/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "A6u-wOhZZVdI6pnWb0hBhBYTU7j6JzZyTySFzaolFrE",
+    "name": "Botega LP AODOGE/wAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "LyQLxkm4OaNZevDuJ13sHYSmIi9Oxa75zo3jASlaXZc",
+    "name": "Botega LP qAR/SBT 25",
+    "type": "amm"
+  },
+  {
+    "id": "cuF1-drHNo9UE181XgRa-uiP5syyTengZmGllZZp-tE",
+    "name": "Botega LP wAR/WDF 25",
+    "type": "amm"
+  },
+  {
+    "id": "_jQ--brkBoDuFA-e22ZuQq3KuGe5kGZutrtGmKPvGaM",
+    "name": "Botega LP lll/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "adYsOC2ZIXb8rp0e8QVSDUsgc2q5Q4WyTU04mZaeLVg",
+    "name": "Botega LP AGENT/MAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "sGtzsaci3BSoUMw5Ev-WQ-VUEk4rsmBr7qXz7q6w8Fs",
+    "name": "Botega LP wAR/CATS 25",
+    "type": "amm"
+  },
+  {
+    "id": "_w0rnbSDgDC1yC_5XkryIcsk9gSdpiMq4y0qLbpJjMQ",
+    "name": "Botega LP wAR/SXAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "2jceFDX70udoqU9VmBvTvlnHLkX5XE5fJYJ3a3LE5tI",
+    "name": "Botega LP AO/FFP 25",
+    "type": "amm"
+  },
+  {
+    "id": "qABj7_8uO60C33fAM3zIFqtl4Sq-t4cltOS-rUbX4pw",
+    "name": "Botega LP qAR/POOL 25",
+    "type": "amm"
+  },
+  {
+    "id": "xoAj9HLWV6_kRnCAiGW8FzyiIdNKGXBnWa1Mq5IiByM",
+    "name": "Botega LP TRUNK/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "a3Z0v954hOPKZLuSZjQcgfyAG_zTNnhTQ81E_d_7zYA",
+    "name": "Botega LP 7i7o/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "jMla72tPc_qAaBOAqMQQ4dzQfg2-AI_CeUBJshdHBu4",
+    "name": "Botega LP qAR/ARIO 75",
+    "type": "amm"
+  },
+  {
+    "id": "O3XNkMtPks7QfSWABss3UOVO0dC_xDrQzqqQvweZpxU",
+    "name": "Botega LP AO/DUMPET 25",
+    "type": "amm"
+  },
+  {
+    "id": "uTVT617nw4Fq5dmeLxvraTg1PgryDF1jJUj4yPG70fk",
+    "name": "Botega LP wAR/MOMO 25",
+    "type": "amm"
+  },
+  {
+    "id": "XIbSQ6D0sqHZ5MGv3qU3z6pMEA0vg-hfM5ofNABMauk",
+    "name": "Botega LP AGENT/AO 300",
+    "type": "amm"
+  },
+  {
+    "id": "AVJF-g9es8nt9n5krkuIgPt0R5zxBTc5lNq-6JzT9Yg",
+    "name": "Botega LP wUSDT/wUSDC 25",
+    "type": "amm"
+  },
+  {
+    "id": "HPkFE5qyaIxsxGYWvMXqnQ4fIZQHqJQ5LjFHVkBExEo",
+    "name": "Botega LP MOIL-S1/AOB 25",
+    "type": "amm"
+  },
+  {
+    "id": "C5bbKU3B2yz-pJU8m3nV4LioCYzlCtm75MQR4FlOzUo",
+    "name": "Botega LP NAB/MINT 300",
+    "type": "amm"
+  },
+  {
+    "id": "Ruw6Q5gVgZ-isWhRGW4LVvTu6rMost-J5SKsF4rF-rA",
+    "name": "Botega LP MINT/qAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "nkEtNiUT2BKYgZfwFygTgctXY1LJu_K-OUPtSqDPHA0",
+    "name": "Botega LP wAR/SDAO 25",
+    "type": "amm"
+  },
+  {
+    "id": "eAopfCQPdHEWTmbJ0SrnsEnbhO_ZwwMAK4MMVOezw1Q",
+    "name": "Botega LP AO/AOS 25",
+    "type": "amm"
+  },
+  {
+    "id": "MZvo-FQq7p57ADa6TVM6p5eN7vdh1il5IbqzzjvVh7k",
+    "name": "Botega LP AO/Test_APUS_001 25",
+    "type": "amm"
+  },
+  {
+    "id": "AaO68LmFURh6qECfpUuIyT2dfdalff79VC3NZAl_Buo",
+    "name": "Botega LP MEMEA/DNE 25",
+    "type": "amm"
+  },
+  {
+    "id": "AnMWiOFl708rIndIdgRA8GaHIQqniWH2xEA2CEvHMN0",
+    "name": "Botega LP MEMEA/DNE 25",
+    "type": "amm"
+  },
+  {
+    "id": "uYHmatv2BSw85pB5j75mwbwKn_aMnpUqptoi6xIrjw0",
+    "name": "Botega LP AO/DRP 25",
+    "type": "amm"
+  },
+  {
+    "id": "_vuZD6v5Y1Ymty0gnSnAuz1_yi8Cbj4Rt6cNIJ9uosQ",
+    "name": "Botega LP AO/UPS 25",
+    "type": "amm"
+  },
+  {
+    "id": "grzLTb5-CEdPUx59gPxtuohpvUWyse6s7j7OZqORLeY",
+    "name": "Botega LP MINT/GAME 25",
+    "type": "amm"
+  },
+  {
+    "id": "N5yUAUA3XGKZmvoRXnYtJVvMu2wHun0Afrb6WuQCqk8",
+    "name": "Botega LP ARIO/NAB 25",
+    "type": "amm"
+  },
+  {
+    "id": "XHdCpnwvsAe46bPR2B7Sz77zueZaHwoqptMX14RlSj0",
+    "name": "Botega LP ARIO/NAB 300",
+    "type": "amm"
+  },
+  {
+    "id": "iIH6xBUYkh_IQ15iG24oBH7SZyIEtHV5ElpRiyUzqpk",
+    "name": "Botega LP NAB/SEND 25",
+    "type": "amm"
+  },
+  {
+    "id": "79ratRoWvTq937l5Z1EbLDhl2PfnkY9dOjoLFefncmI",
+    "name": "Botega LP AO/TKT 25",
+    "type": "amm"
+  },
+  {
+    "id": "cV5woyP2L2tf4Cvi7HMGhJ4agVB4ZxFUkfzWSYVRlrU",
+    "name": "Botega LP AO/LLAMA 300",
+    "type": "amm"
+  },
+  {
+    "id": "kv2cENbQba91pSfNaQ0YEZTTpG1F7ZnR30af_NWLt4k",
+    "name": "Botega LP AO/TKTN3 25",
+    "type": "amm"
+  },
+  {
+    "id": "cvC0iZZwaXKHGdiNk_eafJfPACn9gLFE-Qk5qljVBuY",
+    "name": "Botega LP AO/RIP 25",
+    "type": "amm"
+  },
+  {
+    "id": "4-90Nz2VYKwPvk5Fj-QbzWgLw5aAUASPRpetK8kjVpg",
+    "name": "Botega LP wAR/DUMDUM 300",
+    "type": "amm"
+  },
+  {
+    "id": "OFSW21mXnnrzXyuRvBJP8DJ-wyj8hZMgcl5YgMYt1jM",
+    "name": "Botega LP qAR/RDR 25",
+    "type": "amm"
+  },
+  {
+    "id": "b_bjXvUF0190O3Ony6YX4IfxZEy1weyZJdFRBBfoEg4",
+    "name": "Botega LP wAR/BOOST 75",
+    "type": "amm"
+  },
+  {
+    "id": "GdB3ZOrcmHjzIrcIk59c-K_ZaTxFXmQ2vAORyAuX3s4",
+    "name": "Botega LP AO/TKTXX 75",
+    "type": "amm"
+  },
+  {
+    "id": "xPr3l_F1OlvpVgeCtlTTkejNmR-28ZNWAcMMRbpUGdA",
+    "name": "Botega LP TEST/MATRIX 25",
+    "type": "amm"
+  },
+  {
+    "id": "t4JkQ4i5rkYFsBI3_45pff4xkaQayoYYTvh7UPkrJs4",
+    "name": "Botega LP TEST/MATRIX 25",
+    "type": "amm"
+  },
+  {
+    "id": "sf5fcxbpaB1WLbzRFhFYhRZTOk2toSyFDVxO7rxCIjw",
+    "name": "Botega LP TEST/MATRIX 25",
+    "type": "amm"
+  },
+  {
+    "id": "HATiF_ca6ENn7aS5bcbkcZb7X5Nq_rhYJ7XE-YLYfuY",
+    "name": "Botega LP MPT2/TEST 25",
+    "type": "amm"
+  },
+  {
+    "id": "lurwC6ZbuSQuPnamnGB-CgRx4OyuQqeNQq4EqoIZu1A",
+    "name": "Botega LP APUS/AO 300",
+    "type": "amm"
+  },
+  {
+    "id": "gpNNHiPVV_SNTxQodRl8DE3QBZTg1596KeuQD0NNw_g",
+    "name": "Botega LP wUSDT/owUSDT 25",
+    "type": "amm"
+  },
+  {
+    "id": "e8LHN_7sOYm2lhci-d1rJZc8L4EBgffE0zAwpIjRpb8",
+    "name": "Botega LP wAR/owAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "Mwe3OVJs-j_9YIpvDFCowNqnF_LnuEKxULT3VqApt1o",
+    "name": "Botega LP wAR/owAR 75",
+    "type": "amm"
+  },
+  {
+    "id": "tFGbThZeg77tnpVb3Jt8pCOZBBce5J4ZZuZXRo3aOEg",
+    "name": "Botega LP wAR/owAR 125",
+    "type": "amm"
+  },
+  {
+    "id": "DtKpboLR1mslsgdgA_sA2ALpPAvZR6AJERFcrRRf4UI",
+    "name": "Botega LP wAR/owAR 300",
+    "type": "amm"
+  },
+  {
+    "id": "oVK6bSu-XA0Sgqh2ubAzJ5ZzBjleJjmR7L6ZgY53klM",
+    "name": "Botega LP wETH/owETH 25",
+    "type": "amm"
+  },
+  {
+    "id": "RQTIq_IMiiA4GIOXcyzu0TZURK5xipsfOfsdEPEoHmE",
+    "name": "Botega LP wAR/owAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "yKngqSGQfxpfcXe-2RpCLoDY8ZTeC6jZuS3cQCYHo1Y",
+    "name": "Botega LP AO/wETH 75",
+    "type": "amm"
+  },
+  {
+    "id": "d8RyAhYPFi7alDcQGkFRFVFmmMeCsyVE0iTxPJk2Pd0",
+    "name": "Botega LP TKT/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "l34zNwvGHXqvdAaymAQs9eNQPWccXQi3kQR0G-c4ei4",
+    "name": "Botega LP AO/RENOUNCE 25",
+    "type": "amm"
+  },
+  {
+    "id": "oSJyr00y-501Rc_-As45d5CQVZA9YSn1GRYRy0QvAEo",
+    "name": "Botega LP AO/4FLOKKI4 25",
+    "type": "amm"
+  },
+  {
+    "id": "yegjj-WALfaZLP2sqSdpmWJu6aLk1C2pYiPBUv2Ns2s",
+    "name": "Botega LP AO/SAGE 25",
+    "type": "amm"
+  },
+  {
+    "id": "suMwoM-RO4n5QYXECfzjuO74IzsZNCqTNXXrFrrwG8c",
+    "name": "Botega LP AO/HB3 25",
+    "type": "amm"
+  },
+  {
+    "id": "mDI_8W4nm329W7amUYk1jtpS4SNitL4BlWvJf8J5Ok0",
+    "name": "Botega LP wAR/SOCIALS 25",
+    "type": "amm"
+  },
+  {
+    "id": "g9SKT2nSmfw70CiQXcz03RTdg9SzwCc4qxAGFJ15xYk",
+    "name": "Botega LP AO/CHINA 25",
+    "type": "amm"
+  },
+  {
+    "id": "z-A8anZReyf0yRS3F8YZ3TsbNYt2RUE825VqRIbpHzw",
+    "name": "Botega LP AO/AGENT 125",
+    "type": "amm"
+  },
+  {
+    "id": "yykwi3aZEs2FfDZRrNxWqThKYVcw2ddgohqQDDVrqxI",
+    "name": "Botega LP wAR/NAB 300",
+    "type": "amm"
+  },
+  {
+    "id": "54OswXiutViNMa7AYopo9uxvMeE5dQ5cCYzy4Z_1Ruo",
+    "name": "Botega LP wAR/HB3 25",
+    "type": "amm"
+  },
+  {
+    "id": "-kCXnJs0m1tn48JhjcwQwhGuKppqi9_62jLOWHYxuXA",
+    "name": "Botega LP wAR/BOOST 25",
+    "type": "amm"
+  },
+  {
+    "id": "u--39jbZzEe4hx-e3Q3iy1w4reTDdblJlDzf5ilMRW4",
+    "name": "Botega LP wAR/BOOST 25",
+    "type": "amm"
+  },
+  {
+    "id": "2QARxomUakctYq9GEXHCoYyw3YbL_8CHiHpzl-GJrTw",
+    "name": "Botega LP wAR/BOOST 25",
+    "type": "amm"
+  },
+  {
+    "id": "ZZ-L5YF8-qgtmpcD12kuXAUYNPyy7T-xy1PhaDCZitc",
+    "name": "Botega LP PI/AO 25",
+    "type": "amm"
+  },
+  {
+    "id": "OjNjlBVWc2nHZRRSCXl_f5909SVDLcMA8paxKH-Gc0M",
+    "name": "Botega LP USDA/vAR 25",
+    "type": "amm"
+  },
+  {
+    "id": "88pi24aSQ7MhSYXxxJadqRZJcHFth0KXHRYeEyEw4Xg",
+    "name": "Botega LP AO/PI 75",
+    "type": "amm"
+  }
+]

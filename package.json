@@ -1,0 +1,15 @@
+{
+	"name": "hydration-service",
+	"private": true,
+	"scripts": {
+		"backend:dev": "cd apps/backend && bun run dev",
+		"backend:start": "cd apps/backend && bun run start"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"workspaces": ["apps/*"]
+}
