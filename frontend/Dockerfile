@@ -7,7 +7,7 @@ COPY . ./
 RUN bun install
 
 # If your build script is "vite build", keep it; otherwise adjust:
-RUN bun run build
+RUN bunx --bun vite build
 
 # Expose the Vite preview port (default 4173)
 EXPOSE 4173
