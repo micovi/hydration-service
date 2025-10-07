@@ -11,8 +11,8 @@ services:
       - redis-data:/data
   backend:
     build:
-      context: .
-      dockerfile: ./apps/backend/Dockerfile
+      context: ./apps/backend
+      dockerfile: ./Dockerfile
     ports:
       - "8081:8081"
     environment:
@@ -23,8 +23,8 @@ services:
     restart: unless-stopped
   frontend:
     build:
-      context: .
-      dockerfile: ./frontend/Dockerfile
+      context: ./frontend
+      dockerfile: ./Dockerfile
     ports:
       - "4173:8080"
     depends_on:
