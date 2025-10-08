@@ -321,6 +321,7 @@ function ProcessRecordRow({ process }: { process: ProcessRecord }) {
             )} */}
             <OnceButton process={process} />
             <EveryButton process={process} />
+            <NowButton process={process} />
             {checkpoint ? (
               <Button
                 className="font-mono"
@@ -420,7 +421,9 @@ function DisplayReserves({ process }: { process: ProcessRecord }) {
       return out;
     },
     staleTime: STALE_TIME,
-    enabled: process.compute_at_slot === process.latest_slot && process.latest_slot !== "0",
+    enabled:
+      process.compute_at_slot === process.latest_slot &&
+      process.latest_slot !== "0",
   });
 
   const {
@@ -450,7 +453,9 @@ function DisplayReserves({ process }: { process: ProcessRecord }) {
       return data;
     },
     staleTime: STALE_TIME,
-    enabled: process.compute_at_slot === process.latest_slot && process.latest_slot !== "0",
+    enabled:
+      process.compute_at_slot === process.latest_slot &&
+      process.latest_slot !== "0",
   });
 
   const tokens = Array.from(
@@ -574,6 +579,41 @@ function EveryButton({ process }: { process: ProcessRecord }) {
         "*/5"
       ) : (
         <span>{startMutation.isPending ? "..." : "*/5"}</span>
+      )}
+    </Button>
+  );
+}
+
+function NowButton({ process }: { process: ProcessRecord }) {
+  const queryClient = useQueryClient();
+  const startMutation = useMutation({
+    mutationFn: async () => {
+      const rs = await fetch(
+        `${HB_URL}/${process.id}~process@1.0/now/keys/serialize~json@1.0`
+      );
+
+      const responseId = await rs.json();
+
+      console.log(rs.status, responseId);
+
+      return responseId;
+    },
+    onSuccess: async (responseText) => {
+      queryClient.invalidateQueries({ queryKey: ["processes"] });
+      console.log(responseText);
+    },
+  });
+  return (
+    <Button
+      className="font-mono"
+      onClick={() => startMutation.mutate()}
+      disabled={startMutation.isPending}
+      type="button"
+    >
+      {startMutation.isSuccess ? (
+        "/n"
+      ) : (
+        <span>{startMutation.isPending ? "..." : "/n"}</span>
       )}
     </Button>
   );
