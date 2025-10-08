@@ -304,7 +304,7 @@ function ProcessRecordRow({ process }: { process: ProcessRecord }) {
         </TableCell>
         {debug && (
           <TableCell className="flex flex-row gap-1">
-            {process.taskId ? (
+            {/* {process.taskId ? (
               <Button
                 className="font-mono"
                 onClick={() => stopTaskMutation.mutate()}
@@ -318,8 +318,9 @@ function ProcessRecordRow({ process }: { process: ProcessRecord }) {
                 <OnceButton process={process} />
                 <EveryButton process={process} />
               </>
-            )}
-
+            )} */}
+            <OnceButton process={process} />
+            <EveryButton process={process} />
             {checkpoint ? (
               <Button
                 className="font-mono"

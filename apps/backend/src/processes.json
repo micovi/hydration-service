@@ -683,5 +683,50 @@
 		"id": "T1DJeimibxLbTYZANZ3acseBHTvKfWpSe9DS9cBWCrk",
 		"name": "Botega LP FLT2/MOCKAO 25",
 		"type": "amm"
+	},
+	{
+		"id": "B6qAwHi2OjZmyFCEU8hV6FZDSHbAOz8r0yy-fBbuTus",
+		"name": "Botega LP wAR/AO 25",
+		"type": "amm"
+	},
+	{
+		"id": "V9y6bTd8UhvrWutoDYogVK-Ot_Xw6MrNsXeDGHoXu0w",
+		"name": "Botega LP AO/PI 300",
+		"type": "amm"
+	},
+	{
+		"id": "OjNjlBVWc2nHZRRSCXl_f5909SVDLcMA8paxKH-Gc0M",
+		"name": "Botega LP USDA/vAR 25",
+		"type": "amm"
+	},
+	{
+		"id": "TYqlQ2vqkF0H6nC0mCgGe6G12pqq9DsSXpvtHYc6_xY",
+		"name": "Botega LP wUSDC/AO 25",
+		"type": "amm"
+	},
+	{
+		"id": "wTIpisZKMtG5WsLFqQBdoJEObyyeoJQmwWFm1h462D4",
+		"name": "Botega LP AO/qAR 25",
+		"type": "amm"
+	},
+	{
+		"id": "Bv5mfnx5Ln2BU60inXPnMOGMwecJXadV4oqw7iwjzSk",
+		"name": "Botega LP wAR/qAR 25",
+		"type": "amm"
+	},
+	{
+		"id": "WuAkqYvunUtsD8uvpsK9XtR7_5-fbnH3ATD4DJrl-Ac",
+		"name": "Botega LP DUMDUM/qAR 25",
+		"type": "amm"
+	},
+	{
+		"id": "aDeXXVoY5bYWk2k5SFK9bSIxDFw1M9d2ac2vRZEnW7s",
+		"name": "Botega LP ARIO/AO 125",
+		"type": "amm"
+	},
+	{
+		"id": "QQpoLDH-iymHGH8ypS4eyMeG1_E_mIGcyTK_uh5oY9I",
+		"name": "Botega LP FFP/wAR 25",
+		"type": "amm"
 	}
 ]
