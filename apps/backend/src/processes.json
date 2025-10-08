@@ -320,96 +320,6 @@
 		"type": "token"
 	},
 	{
-		"name": "Pool 80",
-		"id": "O0WPt9S6HQXYQLdRty9q62VhzlTw9E-eBl48O8BKoXs",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 81",
-		"id": "Z2y50NZ-DjIzQnjTDv-tlqPj9hCQW881S5kNy3nCzWk",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 83",
-		"id": "LPqr7Jh3DPMxttbCRoefEi3CRLI7qwVxpNRjUhGt0bw",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 84",
-		"id": "A6u-wOhZZVdI6pnWb0hBhBYTU7j6JzZyTySFzaolFrE",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 85",
-		"id": "EMm_PJarwgBTFGTXvhyDebkE3ocUe1sAnIs9W5tfFcQ",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 86",
-		"id": "AaijM5dtqNzldluY8gKk7O4zdp5UPv3u0cUEowga5ZI",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 87",
-		"id": "ZMde6bsol6kJJdWL_z90dK2stcyiyRkwpEhUblzY8u0",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 88",
-		"id": "C8nhA7daxSLsvjljKRDGWLac54njWlXzvs0m2OKeE_4",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 89",
-		"id": "bMyl_dysjbyKJBbaT9u9RwgTd527H3WcSvVyGugljvM",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 90",
-		"id": "oeDBkdZJpbSvc8AO7z5KfqBqFj1ULOMkcXyHY-MlYAc",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 91",
-		"id": "zW-R3nHs6pIR1qMV1C-SPHG6UMRIdoV0IskV2IrN-ps",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 92",
-		"id": "Lji25RS3-9LXZe4-gFpdnBMgqyRDqUzZPHWS-HqPWsU",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 93",
-		"id": "4IGzddk67tIZ9zS6AEGO4DA_hq5-LONepeWd3xqt5sM",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 94",
-		"id": "f90WPMT7E3ncJQYpyAUetV57weHG0ZPaK9Kp1uzIsbg",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 95",
-		"id": "GDwK5yJSSglzrjIe3aIXhSLK4UUzgITeDv-e_iBqh9Y",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 96",
-		"id": "2jceFDX70udoqU9VmBvTvlnHLkX5XE5fJYJ3a3LE5tI",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 97",
-		"id": "4MYqWdc4_TcvVU0zoNMzuIZkUnazrSf0d-FsVjEPtSU",
-		"type": "amm"
-	},
-	{
-		"name": "Pool 99",
-		"id": "dItcG4lIVGSsi_wufAFeiWSkKCmZR25IbUuwykpQUhc",
-		"type": "amm"
-	},
-	{
 		"id": "Ln-vGz1E28mCG7LCTYoact6UnQfWibv2deNqpL9hhqs",
 		"name": "Botega LP vAR/GAME 25",
 		"type": "amm"
@@ -437,16 +347,6 @@
 	{
 		"id": "3Hb61h-FX6w0ntSRtSsP771fqLbSD_aZO9rZzp9g22o",
 		"name": "Botega LP ALPHA/qAR 25",
-		"type": "amm"
-	},
-	{
-		"id": "t9ZrPXrahkITvI0dEEJm_tfH5eAnkHeks9l0k1-VwhU",
-		"name": "Botega LP DAM/qAR 25",
-		"type": "amm"
-	},
-	{
-		"id": "WNaohFi8zrRKo4fYFicO2mmUgkp3guL_G-QLlLwi7CI",
-		"name": "Botega LP HH/wAR 25",
 		"type": "amm"
 	},
 	{
@@ -525,38 +425,8 @@
 		"type": "amm"
 	},
 	{
-		"id": "nHWcfNzeqjZ8Bot4R-xs_7Jez7Fl2AeDzKlN7qWmS24",
-		"name": "Botega LP qAR/tIO 25",
-		"type": "amm"
-	},
-	{
-		"id": "a2LzZL8hAVvdaY2ldjcSeI8RxrHMvN4D3q-7zDjnUkM",
-		"name": "Botega LP DUMPET/wAR 25",
-		"type": "amm"
-	},
-	{
-		"id": "nzj48XewmWtr7bLqK8f2gS6CsXEK8CI028qyUdiL7Oc",
-		"name": "Botega LP BRO2/ST2 25",
-		"type": "amm"
-	},
-	{
-		"id": "cq6maMQI-rFIq1pjpKl7lhZNR6PRgICJaadk3F9hurg",
-		"name": "Botega LP AO/mockAO 25",
-		"type": "amm"
-	},
-	{
-		"id": "Bpb67Bk6-w1EyuttQygqYPm3RVOGjXz3QXzDB70Pd64",
-		"name": "Botega LP DRP/wUSDC 25",
-		"type": "amm"
-	},
-	{
 		"id": "Pys8sZjPzCmtYe_9NqhxBSScN7z56-r_Uj_y1ShA7X8",
 		"name": "Botega LP AO/USDA 300",
-		"type": "amm"
-	},
-	{
-		"id": "c9yLzhvMOBaR3ITPIQG-l24qz0MqfBi358XSvDxQx98",
-		"name": "Botega LP DRP/wAR 25",
 		"type": "amm"
 	},
 	{
@@ -570,88 +440,13 @@
 		"type": "amm"
 	},
 	{
-		"id": "oqg_h_L6k4s9W1u3tNqTyo4DDDHiwCiAPSsV5nkG1Pc",
-		"name": "Botega LP wAR/LYNX 25",
-		"type": "amm"
-	},
-	{
-		"id": "WReIFPff-HgJlqxCccFbZVbrksv8N8oZ-cVSh6BwG3c",
-		"name": "Botega LP TTYES/BRO2 25",
-		"type": "amm"
-	},
-	{
-		"id": "lZf2035dMcEIN5sB_qCdmZAY48whU5DLseQrS3Htz9I",
-		"name": "Botega LP HWT/TUSDA 25",
-		"type": "amm"
-	},
-	{
-		"id": "G-rNKwxLrZw5fjr3nF1FGJUVJn43XTZUVqg29G8Aaus",
-		"name": "Botega LP WDT/TUSDA 25",
-		"type": "amm"
-	},
-	{
 		"id": "bxpz3u2USXv8Ictxb0aso3l8V9UTimaiGp9henzDsl8",
 		"name": "Botega LP wUSDC/NAB 25",
 		"type": "amm"
 	},
 	{
-		"id": "vDa7tuzarALNNG9obS1X5rMwq8EkxLZ4TmMKNjKcicg",
-		"name": "Botega LP HALO/DUMDUM 25",
-		"type": "amm"
-	},
-	{
-		"id": "k7iek6czuasNpcvsM_xbJBckEL9qD8dMWsxTTCYD1I8",
-		"name": "Botega LP qAR/AO16Z 25",
-		"type": "amm"
-	},
-	{
-		"id": "LPqr7Jh3DPMxttbCRoefEi3CRLI7qwVxpNRjUhGt0bw",
-		"name": "Botega LP AOFI/qAR 25",
-		"type": "amm"
-	},
-	{
-		"id": "Z4PyVHiRi1-lkatNCcZLTQZ2j3NSqemMfME3UyzQHtE",
-		"name": "Botega LP AOFI/wAR 25",
-		"type": "amm"
-	},
-	{
-		"id": "U3afz7BGyrNGfz6SKbDx2Rx428tqbx9aUbLr7WzOWX4",
-		"name": "Botega LP AGENT/UPS 25",
-		"type": "amm"
-	},
-	{
-		"id": "zW-R3nHs6pIR1qMV1C-SPHG6UMRIdoV0IskV2IrN-ps",
-		"name": "Botega LP wAR/FKEEP 25",
-		"type": "amm"
-	},
-	{
-		"id": "mR6ri1KnowZnAEEL_Gqdx06KEqnOl3BP8yrvG-lSgr8",
-		"name": "Botega LP wAR/CODE 25",
-		"type": "amm"
-	},
-	{
-		"id": "NCKt74nE4RGMtI70O1Omcs-jOq3W77Z1KTSYZ9yo-Gc",
-		"name": "Botega LP UPS/DRP 25",
-		"type": "amm"
-	},
-	{
-		"id": "nb5DzoJvO220ipghdr8MNg5aYZyrtOOloCCLt4h-CwA",
-		"name": "Botega LP BLAH/wAR 25",
-		"type": "amm"
-	},
-	{
-		"id": "wvrRUDLrXmzeoIOk4vqOdjIMWG6NddkGG_GxoY6HHKg",
-		"name": "Botega LP AGENT/DUMPET 25",
-		"type": "amm"
-	},
-	{
 		"id": "IJHmoKuKiGFzm3KDX2p3hMwVHAxGDdC2w8ow_2K2l5w",
 		"name": "Botega LP SEND/wAR 25",
-		"type": "amm"
-	},
-	{
-		"id": "X_yN4PUVdrWRFAZFC5AaH-QXuz3-ZVPAU2q__jRdufw",
-		"name": "Botega LP EXP/MINT 25",
 		"type": "amm"
 	},
 	{
@@ -667,21 +462,6 @@
 	{
 		"id": "9eM72ObMJM6o3WHi6nTldwhHsCXSKgzz1hv-FpURZB4",
 		"name": "Botega LP wAR/NAB 25",
-		"type": "amm"
-	},
-	{
-		"id": "EpaHewxQPcOyFGUZkuuN6VHIQUAhcDi3qrc1piTvpEE",
-		"name": "Botega LP AO/TKT 25",
-		"type": "amm"
-	},
-	{
-		"id": "-ODWCCtpKD0IpUtCrKTH8SbE9RNG7o6LUnlEfr0WjoI",
-		"name": "Botega LP AGENT/TRUNK 25",
-		"type": "amm"
-	},
-	{
-		"id": "T1DJeimibxLbTYZANZ3acseBHTvKfWpSe9DS9cBWCrk",
-		"name": "Botega LP FLT2/MOCKAO 25",
 		"type": "amm"
 	},
 	{
