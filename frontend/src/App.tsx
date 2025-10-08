@@ -420,7 +420,7 @@ function DisplayReserves({ process }: { process: ProcessRecord }) {
       return out;
     },
     staleTime: STALE_TIME,
-    enabled: process.compute_at_slot === process.latest_slot,
+    enabled: process.compute_at_slot === process.latest_slot && process.latest_slot !== "0",
   });
 
   const {
@@ -450,7 +450,7 @@ function DisplayReserves({ process }: { process: ProcessRecord }) {
       return data;
     },
     staleTime: STALE_TIME,
-    enabled: process.compute_at_slot === process.latest_slot,
+    enabled: process.compute_at_slot === process.latest_slot && process.latest_slot !== "0",
   });
 
   const tokens = Array.from(
