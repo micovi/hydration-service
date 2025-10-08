@@ -304,9 +304,15 @@ app.get("/cron/stop/:processId", async (c) => {
 
 app.get("/", async (c) => {
   const processes = await redis.smembers("processes");
+
+  console.log(`Found ${processes.length} processes in Redis`);
+
+  // Fetch details for each process
   const processDetails = await Promise.all(
     processes.map((processId) => redis.hgetall(`process:${processId}`))
   );
+
+  console.log(`Fetched details for ${processDetails.length} processes`);
 
   // Sort processes by type ascending
   processDetails.sort((a, b) => b.type.localeCompare(a.type));
