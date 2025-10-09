@@ -4,11 +4,13 @@ services:
   redis:
     image: redis:7-alpine
     restart: unless-stopped
-    ports:
-      - "6379:6379"
-    command: ["redis-server", "--appendonly", "yes"]
+    command: ["redis-server", "--appendonly", "yes", "--requirepass", "${REDIS_PASSWORD}"]
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
     volumes:
       - redis-data:/data
+    networks:
+      - private
   backend:
     build:
       context: ./apps/backend
@@ -16,27 +18,36 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - REDIS_URL=redis://redis:6379
-      - HB_URL=http://65.108.7.125:8734
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis:6379/0
+      - HB_URL=https://hb.zoao.dev
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
     depends_on:
       - redis
     restart: unless-stopped
+    networks:
+      - private
+      - public 
   frontend:
     build:
       context: ./frontend
       dockerfile: ./Dockerfile
       args:
-        - VITE_BACKEND_URL=/hydration-service/backend
-        - VITE_HB_URL=/hydration-service/hb-node
+        - VITE_BACKEND_URL=http://backend:8081
+        - VITE_HB_URL=https://hb.zoao.dev
     ports:
       - "8080:4173"
     depends_on:
       - backend
     restart: unless-stopped
+    networks:
+      - public
+
+networks:
+  private:
+    driver: bridge
+    internal: true
+  public:
+    driver: bridge
 
 volumes:
   redis-data:
-
-networks:
-  default:
-    driver: bridge

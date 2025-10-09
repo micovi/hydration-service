@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/hydration-service/",
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -13,7 +13,7 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ["hb.zoao.dev", "localhost"],
+    allowedHosts: ["hb.zoao.dev", "hb-hs.zoao.dev", "localhost"],
     proxy: {
       "/hydration-service/hb-node": {
         target: "http://65.108.7.125:8734",
