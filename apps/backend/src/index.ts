@@ -12,7 +12,7 @@ app.use("/*", cors());
 // No connection is made until a command is executed
 const redis = new Redis(process.env.REDIS_URL || "redis://localhost:6379");
 
-const HB_URL = process.env.HB_URL || "http://65.108.7.125:8734";
+const HB_URL = process.env.HB_URL || "https://hb-hs.zoao.dev";
 
 const runners = {
   latestSlot: false,

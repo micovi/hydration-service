@@ -32,7 +32,7 @@ services:
       context: ./frontend
       dockerfile: ./Dockerfile
       args:
-        - VITE_BACKEND_URL=http://backend:8081
+        - VITE_BACKEND_URL=https://hb-hs-backend.zoao.dev
         - VITE_HB_URL=https://hb.zoao.dev
     ports:
       - "8080:4173"

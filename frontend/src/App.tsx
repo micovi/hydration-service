@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const HB_URL = import.meta.env.VITE_HB_URL || "https://hb.zoao.dev";
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8081";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://hb-hs-backend.zoao.dev";
 
 export const STALE_TIME = 1000 * 60 * 5; // 5 minutes
 
